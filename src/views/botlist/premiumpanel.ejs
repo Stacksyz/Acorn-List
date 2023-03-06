@@ -1,0 +1,72 @@
+<%- include('../parts/head', {bot, user, path}) %>
+
+
+<title>Premium-Panel | Discord Bots</title>
+<style>
+strong {
+color: gray;
+}
+</style>
+<div class="container px-3 mt-2 pt-5">
+    <div class="container px-3 content is-widescreen pt-5">
+        <div class="bg-vote-SnowBots pt-5">
+<div class="bg-vote-SnowBots pt-5">
+<h3 class="has-text-white is-size-3" style="margin-bottom: 10px;"> </h3>
+<center>
+<h3 style="color:white; text-shadow: 2px 2px 5px black;" translate="no" color="" id="fat">SnowBots Premium Panel
+</h3>
+<center>
+    <button onclick="location.href='https://adblockplus.org/'" class="btn btn-danger"><i class="fad fa-check"></i>&nbsp;Click here visit the Ad Blocker!</button>
+    <center>
+    <br>
+    <center>
+    <p class="text-muted">
+<strong>Choice 1</strong>
+<span class="badge badge-danger bg-prem">Premium User Widget</span><br>
+<a class="btn btn-SnowBots" href="/api/premium/user/<%=user.id%>"><i class="fad fa-pencil"></i> Premium User Widget</a>
+<center>
+<br>
+<strong>Choice 2</strong>
+<span class="badge badge-danger bg-prem">Premium User Widget 2</span><br>
+<a class="btn btn-SnowBots" href="/api/premium/user/<%=user.id%>/purple"><i class="fad fa-pencil"></i> Premium User Widget 2</a>
+<center>
+<br>
+<br>
+</div>
+</div>
+</div>
+    <center>
+    <button onclick="location.href='/dc'" class="btn btn-danger"><i class="fad fa-check"></i>&nbsp;Suggest More!</button>
+    </center>
+</div>
+
+<script>
+
+    var urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('success') && urlParams.get('success')){
+    Swal.fire({
+     icon: 'success',
+     title: 'Successful...',
+     closeOnConfirm: false,
+     text: urlParams.get('message'),
+     footer: 'Copyright 2021 &copy  SnowBots.cf - All right reserved.'
+    }).then((result) => {
+  if (result.isConfirmed) {
+    window.location.href = `/premium/panel`;
+  }
+})
+    }
+    if(urlParams.has('error') && urlParams.get('error')){
+    Swal.fire({
+     icon: 'error',
+     title: 'Oops...',
+     text: urlParams.get('message'),
+     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+    }).then((result) => {
+  if (result.isConfirmed) {
+    window.location.href = `/premium`;
+  }    
+})
+    }
+   </script>
+<%- include('../parts/foot') %>

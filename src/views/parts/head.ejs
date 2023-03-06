@@ -1,0 +1,171 @@
+<%- include('./meta.ejs') %>
+<head>
+<script>
+    document.onmousedown=disableclick;
+ status="You are not allowed to do this!";
+function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+    document.onkeydown = function (e) {
+        status="You are not allowed to do this!";
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        
+    }
+</script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark p-2 pl-4 pr-4 bg-SnowBots">
+        <div class="container">
+        <a title="SnowBots" class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="../../img/logo.png" alt="SnowBots"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
+          <span class="fad fa-bars fa-2x"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mainlink mr-auto">
+            <% if(!req.originalUrl.includes('/server')) { %>
+            <li class="nav-item animate slideIn">
+              <a title="SnowBots" class="nav-link nvhome" href="/"><i class="fad fa-home mr-1"></i> Home</a>
+            </li>
+            <li class="nav-item animate slideIn">
+              <a title="SnowBots" class="nav-link" href="/bots"><i class="fad fa-robot mr-1"></i> Bots</a>
+            </li>
+            <li class="nav-item animate slideIn">
+              <a title="SnowBots" class="nav-link" href="/emojis"><i class="fad fa-smile mr-1"></i> Emojis</a>
+            </li>
+            <li class="nav-item animate slideIn"> 
+                <a title="SnowBots" class="nav-link" href="/templates"><i class="fad fa-list mr-1"></i> Templates</a>
+            </li>
+
+            <% if(user) {%>
+            <li class="nav-item animate slideIn">
+                <a title="SnowBots" class="nav-link" href="/addbot"><i class="fad fa-plus mr-1"></i> Add Bot</a>
+            </li>
+            <% } %>
+            <li class="nav-item animate slideIn">
+                <a title="SnowBots" class="nav-link" href="/servers"><i class="fad fa-server mr-1"></i>Servers</a>
+            </li>
+            <li class="nav-item animate slideIn">
+              <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item animate slideIn">
+              <a title="SnowBots" class="nav-link nvhome" href="/servers"><i class="fad fa-home mr-1"></i> Home</a>
+            </li>
+            <li class="nav-item animate slideIn">
+                <a title="SnowBots" class="nav-link" href="/servers/tags"><i class="fad fa-tags mr-1"></i> Tags</a>
+            </li>
+            <li class="nav-item animate slideIn">
+                <a title="SnowBots" class="nav-link" href="/"><i class="fad fa-robot mr-1"></i> Bots</a>
+            </li>
+            <li class="nav-item animate slideIn">
+                <a title="SnowBots" class="nav-link" href="/dsl"><i class="fad fa-robot mr-1"></i> Invite DSL</a>
+            </li>
+            <li class="nav-item animate slideIn">
+              <a title="SnowBots" class="nav-link" href="/emojis"><i class="fad fa-smile mr-1"></i> Emojis</a>
+            </li>
+            <li class="nav-item animate slideIn"> 
+                <a title="SnowBots" class="nav-link" href="/templates"><i class="fad fa-list mr-1"></i> Templates</a>
+            </li>
+            <li class="nav-item animate slideIn">
+              <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News</a>
+            </li>
+            <% if(user) {%>
+            <li class="nav-item animate slideIn"> 
+                <a title="SnowBots" class="nav-link" href="/server/add"><i class="fad fa-plus mr-1"></i> Add Server</a>
+            </li>
+            <% } %>
+            <% } %>
+        <li class="nav-item dropdown" style="font-family: Arial, FontAwesome; z-index: 999999999; width: 100px;">
+            <a class="nav-link dropdown-toggle animate slideIn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fad fa-ellipsis-h"></i>&nbsp;More
+            </a>
+            <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" onclick="location.href='/partners'"><i class="fad fa-handshake"></i>&nbsp;Partners</a>
+            <a class="dropdown-item" onclick="location.href='/team'"><i class="fad fa-users mr-1"></i>&nbsp;Team</a>
+            <a class="dropdown-item" onclick="location.href='/rewards'"><i class="fad fa-coin mr-1"></i>&nbsp;Rewards</a>
+            <a class="dropdown-item" onclick="location.href='/promotion'"><i class="fad fa-stars"></i> Promotions</a>
+            <a class="dropdown-item" onclick="location.href='certification'"><i class="fad fa-badge-check"></i>&nbsp;Certification</a>
+            <a class="dropdown-item" onclick="location.href='/status'"><i class="fad fa-chart-bar mr-1"></i>&nbsp;Status</a>
+            <a class="dropdown-item" onclick="location.href='/codes/categories'"><i class="fad fa-code"></i>&nbsp;Code Share</a>
+            <a class="dropdown-item"  onclick="location.href='/uptime/links'"><i class="fad fa-sync-alt"></i>&nbsp;Uptime</a>
+            <a class="dropdown-item"  onclick="location.href='/bugreport'"><i class="fal fa-bug"></i>&nbsp;Bug Report</a>
+            <a class="dropdown-item" onclick="location.href='/premium'"><i class="fad fa-stars"></i> Premium</a>
+            <% if(user) { %>
+                <% 
+                let guild = bot.guilds.cache.get(config.server.id).members.cache.get(user.id);
+                if(guild) {
+                if(guild.roles.cache.get(roles.administrator) || guild.roles.cache.get(roles.moderator)) {
+                %>
+                    <div class="dropdown-divider"></div><a title="SnowBots" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
+
+                <% }} %>
+            <% } %>
+            </div>
+        </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <% 
+            let languages = global.config.website.languages;
+            %>            
+            &nbsp;
+            <li class="nav-item dropdown">
+                  <a class="btn btn-SnowBots dropdown-toggle slideIn" href="#" id="navbarDropdown" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fad fa-globe"></i>&nbsp;Language
+                  </a>
+                <div class="dropdown-menu dropdown-menu-right slideIn" style="max-width:220px!important;">
+            <% languages.map(x => { %>
+                <a href="#" translate="no" onclick="doGTranslate('en|<%= x.code %>')" title="SnowBots" class="dropdown-item slideIn">
+                <img src="https://www.countryflags.io/<%= x.flag %>/flat/32.png">
+                    &nbsp;<%= x.name %>
+                </a>
+                <% }) %>
+                </div>
+              </li>
+
+
+                                      &nbsp;
+                          <% if(user) {%>
+              <li class="nav-item dropdown">
+                  <a class="btn btn-SnowBots dropdown-toggle slideIn" href="#" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img width="24" style="border-radius: 50%" src='https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.png'>
+                    <%=user.username%><small>#<%=user.discriminator%></small>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu animate slideIn" style="max-width:50px!important"><a class="dropdown-item" href="/user/<%= user.id %>">Profile</a> <a class="dropdown-item" href="/api/user/<%= user.id %>">Widget</a><a class="dropdown-item" href="/theme">Theme</a><div class="dropdown-divider"></div><a class="dropdown-item dropdown-danger" href="/logout"><i class="fad fa-sign-out mr-2"></i>Logout</a></div>
+              </li>
+            <% } else { %>
+            <li class="nav-item">
+                <a title="SnowBots" class="btn btn-SnowBots" href="/uneed2login"><i class="fad fa-sign-in mr-1"></i> Login</a>
+            </li>
+	    <% } %>
+          </ul>
+        </div>
+        </div>
+
+      </nav>
