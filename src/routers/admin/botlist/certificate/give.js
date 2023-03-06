@@ -7,7 +7,7 @@ const appsdata = require("../../../../database/models/botlist/certificate-apps.j
 let sitedatalari = require("../../../../database/models/analytics-site.js");
 const client = global.Client;
 
-console.log("[SnowBots.cf]: Admin/Botlist/Certificate Give router loaded.");
+console.log("[Acorn.ink]: Admin/Botlist/Certificate Give router loaded.");
 
 app.get("/admin/certificate/give/:botID", global.checkAuth, async (req, res) => {
   await botsdata.findOneAndUpdate({

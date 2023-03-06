@@ -2,7 +2,7 @@ const app = require('express').Router();
 const client = global.Client;
 const botsdata = require("../database/models/botlist/bots.js");
 
-console.log("[SnowBots.cf]: Mini pages router loaded.");
+console.log("[Acorn.ink]: Mini pages router loaded.");
 
 app.get("/error", async (req,res) => {
     res.render("error.ejs", {
@@ -188,7 +188,7 @@ app.get("/vanity/:username", async (req,res) => {
     let botdata = await botsdata.findOne({
       vanity: req.params.username
     });
-    res.redirect('https://SnowBots.cf/bot/'+botdata.botID)
+    res.redirect('https://list.acorn.ink/bot/'+botdata.botID)
 })
 app.get("/dsl", async (req,res) => {
     res.redirect(global.config.server.dslinvite)
@@ -202,14 +202,14 @@ app.get("/discord", async (req,res) => {
 
 app.get("/robots.txt", function(req, res) {
     res.set('Content-Type', 'text/plain');
-    res.send(`Sitemap: https://SnowBots.cf/sitemap.xml`);
+    res.send(`Sitemap: https://list.acorn.ink/sitemap.xml`);
 });
 
 app.get("/sitemap.xml", async function(req, res) {
-    let link = "<url><loc>https://SnowBots.cf/</loc></url>";
+    let link = "<url><loc>https://list.acorn.ink/</loc></url>";
     let botdataforxml = await botsdata.find()
     botdataforxml.forEach(bot => {
-        link += "\n<url><loc>https://SnowBots.cf/bot/" + bot.botID + "</loc></url>";
+        link += "\n<url><loc>https://list.acorn.ink/bot/" + bot.botID + "</loc></url>";
     })
     res.set('Content-Type', 'text/xml');
     res.send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">${link}</urlset>`);

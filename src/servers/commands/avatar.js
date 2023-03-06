@@ -16,7 +16,7 @@ module.exports.run = async (client,message,args) => {
         .setImage(avatar)
         .setColor('RANDOM')
         .setDescription('')
-        .setFooter('Powered by SnowBots.cf')
+        .setFooter('Powered by Acorn.ink')
               let button = new MessageButton()
   .setStyle('url')
   .setURL(avatar) 

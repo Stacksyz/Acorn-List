@@ -4,7 +4,7 @@ const sdata = require("../../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[SnowBots.cf/servers]: Edit router loaded.");
+console.log("[Acorn.ink/servers]: Edit router loaded.");
 
 app.get("/:guildID/edit", global.checkAuth, async (req, res) => {
     let serverData = await sdata.findOne({
@@ -127,7 +127,7 @@ app.post("/:guildID/edit", global.checkAuth, async (req, res) => {
     }, { upsert: true })
     }
 
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:870019650593910875> Server Edited`).setDescription(`<:edited:870019650593910875> **${req.user.username}** edited **${guild.name}** \n [Click here to view it!](https://SnowBots.cf/server/${guild.id}/)`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:870019650593910875> Server Edited`).setDescription(`<:edited:870019650593910875> **${req.user.username}** edited **${guild.name}** \n [Click here to view it!](https://list.acorn.ink/server/${guild.id}/)`))
     return res.send({
         success: true,
         message: "Server succesfuly edited."

@@ -4,7 +4,7 @@ const client = global.Client;
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[SnowBots.cf]: Admin/Maintence router loaded.");
+console.log("[Acorn.ink]: Admin/Maintence router loaded.");
 
 app.get("/admin/maintence", global.checkAuth, async (req, res) => {
     if (!config.bot.owners.includes(req.user.id)) return res.redirect('../admin');
@@ -24,7 +24,7 @@ app.post("/admin/maintence", global.checkAuth, async (req, res) => {
         server: config.server.id
     });
     if (bakimdata) return res.redirect('../admin/maintence?error=true&message=Maintenance mode has already been activated for this site.');
-    client.channels.cache.get(global.config.server.channels.webstatus).send(`<a:dis_off:855688791434985472> SnowBots has been switched to __Maintenance__ due to **${req.body.reason}** [||<@&861221279080120371>||]`).then(a => {
+    client.channels.cache.get(global.config.server.channels.webstatus).send(`<a:dis_off:855688791434985472> Acorn has been switched to __Maintenance__ due to **${req.body.reason}** [||<@&861221279080120371>||]`).then(a => {
         new maintenceSchema({
             server: config.server.id,
             reason: req.body.reason,
@@ -40,14 +40,14 @@ app.post("/admin/unmaintence", global.checkAuth, async (req, res) => {
         server: config.server.id
     });
     if (!bakimdata) return res.redirect('../admin/maintence?error=true&message=The website is not in maintenance mode anyway.');
-    const bakimsonaerdikardesSnowBots = new dc.MessageEmbed()
-        .setAuthor("SnowBots.cf", client.user.avatarURL())
+    const bakimsonaerdikardesAcorn = new dc.MessageEmbed()
+        .setAuthor("Acorn.ink", client.user.avatarURL())
         .setThumbnail(client.user.avatarURL())
         .setColor("GREEN")
-        .setDescription(`<a:online:833375738785824788> <a:dis_on:855688790391521290> SnowBots are **active** again!\n[Click to redirect website](https://SnowBots.cf)`)
-        .setFooter("SnowBots © All rights reserved.");
+        .setDescription(`<a:online:833375738785824788> <a:dis_on:855688790391521290> Acorn are **active** again!\n[Click to redirect website](https://list.acorn.ink)`)
+        .setFooter("Acorn © All rights reserved.");
     await client.channels.cache.get(channels.webstatus).messages.fetch(bakimdata.bakimmsg).then(a => {
-        a.edit(`~~ <a:online:833375738785824788> SnowBots has been switched to __maintance__ due to **${bakimdata.reason}** ~~`, bakimsonaerdikardesSnowBots)
+        a.edit(`~~ <a:online:833375738785824788> Acorn has been switched to __maintance__ due to **${bakimdata.reason}** ~~`, bakimsonaerdikardesAcorn)
     })
     client.channels.cache.get(channels.webstatus).send(".").then(b => {
         b.delete({

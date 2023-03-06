@@ -6,7 +6,7 @@ const uptimedata = require("../../../../database/models/uptime.js");
 const appsdata = require("../../../../database/models/botlist/report-apps.js");
 let sitedatalari = require("../../../../database/models/analytics-site.js");
 
-console.log("[SnowBots.cf]: Admin/Botlist/report Decline router loaded.");
+console.log("[Acorn.ink]: Admin/Botlist/report Decline router loaded.");
 const roles = global.config.server.roles;
 const channels = global.config.server.channels;
 const client = global.Client;

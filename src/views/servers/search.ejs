@@ -4,10 +4,10 @@
     <div class="container px-3 mb-5 mt-1">
       <div class="mb-3 mx-auto">
        <span class="icon-section" style="margin-top: -5%;float: right;">
-        <img  draggable="false" style="z-index: -1!important;" class="section-img" title="SnowBots.cf"  src="../img/logo.png" width="320" alt="Discord Bots | Discord Bot List">
+        <img  draggable="false" style="z-index: -1!important;" class="section-img" title="Acorn.ink"  src="../img/logo.png" width="320" alt="Discord Bots | Discord Bot List">
         </span>
-        <h1 class="title" translate="no" style="font-weight: 800;color: #fff">SnowBots</h1>
-        <p class="content" style="opacity: 0.6; margin-top: -20px;color: #fff">Find the best Discord Bots for your server with SnowBots!</p>
+        <h1 class="title" translate="no" style="font-weight: 800;color: #fff">Acorn</h1>
+        <p class="content" style="opacity: 0.6; margin-top: -20px;color: #fff">Find the best Discord Bots for your server with Acorn!</p>
         
             <div>
               <div class="z">
@@ -34,9 +34,9 @@
                   <input type="hidden" name="page" value="1">
                 </form>
           <% global.config.website.servers.tags.slice(0, 3).map(tag => { %>
-          	<a title="vcodes" href="/servers/tag/<%= tag.name %>" class="btn btn-vcodes"><i class="<%= tag.icon %>"></i>&nbsp;<%= tag.name %></a>
+          	<a title="Acorn" href="/servers/tag/<%= tag.name %>" class="btn btn-vcodes"><i class="<%= tag.icon %>"></i>&nbsp;<%= tag.name %></a>
           <% }) %>
-          	<a title="vcodes" href="/servers/tags" class="btn btn-vcodes"><i class="fal fa-tags"></i>&nbsp;Explore Tags</a>
+          	<a title="Acorn" href="/servers/tags" class="btn btn-vcodes"><i class="fal fa-tags"></i>&nbsp;Explore Tags</a>
               </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
                 message += `
                 <a href="/server/${server.id}">
                 <div translate="no" class="mt-2 resultBotBanner">
-                  <img title="SnowBots.cf" class="mr-2" width="48" onError="imgError(this)" style="border-radius: 8px;" src="${server.icon}" />${server.name}
+                  <img title="Acorn.ink" class="mr-2" width="48" onError="imgError(this)" style="border-radius: 8px;" src="${server.icon}" />${server.name}
                 </div>
             </a>
             `;
@@ -136,7 +136,7 @@
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
         <div class="card vcodes-card-custom bg-vcodes border-white border-0">
-          <div class="vcodes-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : 'https://SnowBots.cf/img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
+          <div class="vcodes-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : 'https://list.acorn.ink/img/undefined_back.png' %>);" title="Acorn.ink" ></div>
           <div class="vcodes-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
@@ -154,8 +154,8 @@
             <p translate="no" class="card-text vcodesbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot">Join</a>
           </div>
         </div>
       </div>

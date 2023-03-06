@@ -3,7 +3,7 @@ const db = require("../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[SnowBots.cf/servers]: Tags router loaded.");
+console.log("[Acorn.ink/servers]: Tags router loaded.");
 
 app.get("/tags", async (req,res) => {
     res.render("servers/tags.ejs", {

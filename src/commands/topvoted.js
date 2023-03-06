@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
       .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))
       .setColor("#7289da")
       .setDescription(`**<:vote:872580144714358784> Top 6 voted bots of the week! <:vote:872580144714358784>**\n${botsdata1}\n\n**<:vote:872580144714358784> Top 6 voted servers of the week! <:vote:872580144714358784>**\n${serversdata1}`)
-      .setFooter('Powered By SnowBots.cf | Modified By SnowBots.cf')
+      .setFooter('Powered By Acorn.ink | Modified By Acorn.ink')
     message.channel.send(embed)
   }
 }

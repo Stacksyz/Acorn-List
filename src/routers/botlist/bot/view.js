@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const botsdata = require("../../../database/models/botlist/bots.js");
 const client = global.Client;
-console.log("[SnowBots.cf]: Botlist/Bot view router loaded.");
+console.log("[Acorn.ink]: Botlist/Bot view router loaded.");
 app.get("/bot/:botID", async (req, res, next) => {
     let botdata = await botsdata.findOne({
         botID: req.params.botID

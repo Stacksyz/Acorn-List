@@ -8,19 +8,18 @@ const { parse } = require( "twemoji-parser" )
 registerFont( "./src/assets/fonts/DMSans-Bold.ttf" , { family: "DM Sans", weight: "bold" } );
 registerFont( "./src/assets/fonts/DMSans-Regular.ttf" , { family: "DM Sans", weight: "regular" } );
 registerFont( "./src/assets/fonts/STIXGeneral.ttf" , { family: "STIXGeneral" } );
-registerFont( "./src/assets/fonts/AppleSymbol.ttf" , { family: "AppleSymbol" } );
 registerFont( "./src/assets/fonts/Arial.ttf"       , { family: "Arial" } );
 registerFont( "./src/assets/fonts/ArialUnicode.ttf", { family: "ArielUnicode" } );
 registerFont('./src/assets/fonts/Genta.ttf', { family: 'Genta' } );
 registerFont("./src/assets/fonts/UbuntuMono.ttf", { family: "UbuntuMono" } );
-const Fonts = "'DM Sans', STIXGeneral, AppleSymbol, Arial, ArialUnicode";
+const Fonts = "'DM Sans', STIXGeneral, Arial, ArialUnicode";
 const ms = require(`pretty-ms`)
 const serverData = require(`../../database/models/servers/server.js`);
 exports.run = async (client, message, args) => {
   let findServer = await serverData.findOne({
     id: message.guild.id
   });
-  if (!findServer) return await msgError(`This server was not found in our list.\nAdd your server: [SnowBots.cf/server/add](https://SnowBots.cf)`, {
+  if (!findServer) return await msgError(`This server was not found in our list.\nAdd your server: [Acorn.ink/server/add](https://list.acorn.ink)`, {
     channel: message.channel
   })
   let cooldown = 2 * 60 * 60 * 1000; //This is the same as in index in the auto bump deleter
@@ -117,7 +116,7 @@ function msgError(msg, {
 }) {
   channel.send(new Discord.MessageEmbed()
     .setAuthor(global.clientSL.user.username, global.clientSL.user.avatarURL())
-    .setFooter(`SnowBots.cf/servers`, `https://cdn.discordapp.com/avatars/863104463229550612/8c96923623d21cb7db7796c8f07c2615.webp?size=4096`)
+    .setFooter(`Acorn.ink/servers`, `https://cdn.discordapp.com/avatars/863104463229550612/8c96923623d21cb7db7796c8f07c2615.webp?size=4096`)
     .setTitle(`:x: Error`)
     .setDescription(msg)
     .setColor(`RED`)

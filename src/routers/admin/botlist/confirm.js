@@ -10,7 +10,7 @@ const roles = global.config.server.roles;
 const channels = global.config.server.channels;
 const client = global.Client;
 
-console.log("[SnowBots.cf]: Admin/Botlist/Confirm Bot router loaded.");
+console.log("[Acorn.ink]: Admin/Botlist/Confirm Bot router loaded.");
 
 app.get("/admin/confirm/:botID", global.checkAuth, async (req, res) => {
     const botdata = await botsdata.findOne({
@@ -33,7 +33,7 @@ app.get("/admin/confirm/:botID", global.checkAuth, async (req, res) => {
         **• <:members:876940862305751121> Approved by:** <@${req.user.id}>`)
         .setColor("RANDOM")
         .setThumbnail(bota.displayAvatarURL())
-        .setFooter(`Thanks for using SnowBots.cf bot list!`, bota.displayAvatarURL())
+        .setFooter(`Thanks for using Acorn.ink bot list!`, bota.displayAvatarURL())
         .setTimestamp())
         client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed()
         .setTitle(`<:check:870019748585414686> Bot Approved`)

@@ -6,7 +6,7 @@ const botsdata = require("../database/models/botlist/bots.js")
 const config = require("../../config.js");
 module.exports.run = async (client, message, args) => {
 var bot = message.mentions.users.first()
-if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescription("<:no:833101993668771842> Please Mention A bot from our web.\n<:info:876255965249437717> **Ex.** *+botuptime @SnowBots.cf or 123456789123456789*"));
+if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescription("<:no:833101993668771842> Please Mention A bot from our web.\n<:info:876255965249437717> **Ex.** *+botuptime @Acorn.ink or 123456789123456789*"));
     if(bot)
     {
       var bot = bot;
@@ -17,7 +17,7 @@ if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescripti
     if(!bot)
     {
       const embed = new Discord.MessageEmbed()
-      .setDescription(`<:no:833101993668771842> *You have given an invalid bot ID or mention.*\n<:info:876255965249437717> **Ex.** *+botuptime @SnowBots.cf or 123456789123456789*`)
+      .setDescription(`<:no:833101993668771842> *You have given an invalid bot ID or mention.*\n<:info:876255965249437717> **Ex.** *+botuptime @Acorn.ink or 123456789123456789*`)
        .setColor("#7289da")
       return message.channel.send(embed)
     } 
@@ -28,7 +28,7 @@ if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescripti
       if(!botdata)
       {
          const embed1 = new Discord.MessageEmbed()
-      .setDescription(`<:no:833101993668771842> *Thats not a current bot in SnowBots or in guild.*`)
+      .setDescription(`<:no:833101993668771842> *Thats not a current bot in Acorn or in guild.*`)
        .setColor("#7289da")
       return message.channel.send(embed1)
       }

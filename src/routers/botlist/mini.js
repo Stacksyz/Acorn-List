@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const botsdata = require("../../database/models/botlist/bots.js");
 
-console.log("[SnowBots.cf]: Botlist/Mini router loaded.");
+console.log("[Acorn.ink]: Botlist/Mini router loaded.");
 
 app.get("/certification", async (req, res) => {
     res.render("botlist/apps/certification.ejs", {

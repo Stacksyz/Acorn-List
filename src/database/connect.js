@@ -2,13 +2,13 @@ const config = require("../../config.js");
 const mongoose = require("mongoose")
 
 module.exports = async () => {
-    mongoose.connect(config.bot.mongourl, {
+    mongoose.connect(process.env.MONGO, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
         useFindAndModify: false,
         autoIndex: false
     }).then(() => {
-    console.log("[SnowBots.cf]: Mongoose successfully connected.");
-    }).catch(err => console.log("[SnowBots.cf]: An error occurred while connecting mongoose.", err));
+    console.log("[Acorn.ink]: Mongoose successfully connected.");
+    }).catch(err => console.log("[Acorn.ink]: An error occurred while connecting mongoose.", err));
 }

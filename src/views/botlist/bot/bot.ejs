@@ -205,19 +205,19 @@
                   <p style="background: rgb(8, 8, 8); color:#fff" class="box-2">Github</p>
                 </a>
                 <% } %>
-                <a href="https://SnowBots.cf/api/embed/<%= botdata.botID %>/" class="is-flex mt-1">
+                <a href="https://list.acorn.ink/api/embed/<%= botdata.botID %>/" class="is-flex mt-1">
                   <div style="background: rgb(61, 224, 197)" class="box-2-p"><i class="fad fa-robot is-size-6 mt-1"></i></div>
                   <p style="background: #00ffd5;color:#fff" class="box-2">Widget [Dark]</p>
                 </a>
-                <a href="https://SnowBots.cf/api/embed/<%= botdata.botID %>/light" class="is-flex mt-1">
+                <a href="https://list.acorn.ink/api/embed/<%= botdata.botID %>/light" class="is-flex mt-1">
                   <div style="background: rgb(61, 224, 197)" class="box-2-p"><i class="fad fa-robot is-size-6 mt-1"></i></div>
                   <p style="background: #00ffd5;color:#fff" class="box-2">Widget [Light]</p>
                 </a>
-                <a href="https://SnowBots.cf/api/embed/<%= botdata.botID %>/blue" class="is-flex mt-1">
+                <a href="https://list.acorn.ink/api/embed/<%= botdata.botID %>/blue" class="is-flex mt-1">
                   <div style="background: rgb(61, 224, 197)" class="box-2-p"><i class="fad fa-robot is-size-6 mt-1"></i></div>
                   <p style="background: #00ffd5;color:#fff" class="box-2">Widget [Blue]</p>
                 </a>
-                <a href="https://SnowBots.cf/api/embed/<%= botdata.botID %>/red" class="is-flex mt-1">
+                <a href="https://list.acorn.ink/api/embed/<%= botdata.botID %>/red" class="is-flex mt-1">
                   <div style="background: rgb(61, 224, 197)" class="box-2-p"><i class="fad fa-robot is-size-6 mt-1"></i></div>
                   <p style="background: #00ffd5;color:#fff" class="box-2">Widget [Red]</p>
                 </a>
@@ -274,7 +274,7 @@
                 <div class="row">
                     <div class="rating-cards col-md-12">
                         <div class="ml-4 media p-2" style="border-radius: 9px;">
-                          <img class="mr-3 rounded-circle" alt="SnowBots-cf | Rating System" src="https://cdn.discordapp.com/avatars/<%= req.user.id %>/<%=req.user.avatar%>" />
+                          <img class="mr-3 rounded-circle" alt="Acorn-cf | Rating System" src="https://cdn.discordapp.com/avatars/<%= req.user.id %>/<%=req.user.avatar%>" />
                             <div class="media-body">
                                 <div class="row">
                                     <div class="col-8 d-flex">
@@ -308,7 +308,7 @@
                                              title: 'Oops...',
                                              allowOutsideClick: false,
                                              text: "You forgot to write a review.",
-                                             footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                                             footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                                             })
                                       $("#myReview").html('<i class="fad fa-save"></i>&nbsp;Submit');
                                       $("#myReview").attr("disabled", false);
@@ -320,7 +320,7 @@
                                        title: 'Successful...',
                                        allowOutsideClick: false,
                                        text: "Evaluation has been successfully added to <%= botdata.username%>.",
-                                       footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                                       footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                                       }).then((result) => {
                                        if (result.isConfirmed) {
                                          return document.getElementById('myReviewForm').submit();
@@ -332,7 +332,7 @@
                                        title: 'Oops...',
                                        allowOutsideClick: false,
                                        text: "An unknown error has occurred.",
-                                       footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                                       footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                                       })
                                       $("#myReview").html('<i class="fad fa-save"></i>&nbsp;Submit');
                                       $("#myReview").attr("disabled", false);
@@ -355,7 +355,7 @@
                 <div class="row">
                     <div class="rating-cards col-md-12">
                         <div class="ml-4 media p-2">
-                          <img class="mr-3 rounded-circle" alt="SnowBots-cf | Rating System" src="https://cdn.discordapp.com/avatars/<%= req.user.id %>/<%=req.user.avatar%>" />
+                          <img class="mr-3 rounded-circle" alt="Acorn-cf | Rating System" src="https://cdn.discordapp.com/avatars/<%= req.user.id %>/<%=req.user.avatar%>" />
                             <div class="media-body">
                                 <div class="row">
                                     <div class="col-8 d-flex">
@@ -395,7 +395,7 @@
                 <div class="row">
                     <div class="rating-cards col-md-12">
                         <div class="ml-4 media p-2">
-                          <img class="mr-3 rounded-circle" alt="SnowBots-cf | Rating System" onError="imgError(this)" src="<%= userRate ? userRate.avatarURL() : '../../img/undefined_logo.png' %>" />
+                          <img class="mr-3 rounded-circle" alt="Acorn-cf | Rating System" onError="imgError(this)" src="<%= userRate ? userRate.avatarURL() : '../../img/undefined_logo.png' %>" />
                             <div class="media-body">
                                 <div class="row">
                                     <div class="col-8 d-flex">
@@ -420,14 +420,14 @@
                              if(!c.reply) {
                              if(req.user.id === botdata.ownerID || botdata.coowners.includes(req.user.id)) { 
                              %>
-                              &nbsp;<button data-toggle="modal" data-target="#reply<%= userRate.id %>" id="replyButton" class="btn btn-SnowBots"><i class="fad fa-reply"></i>&nbsp;Reply</button>
-                              &nbsp;<button onclick="clickOnDeletReview('<%= userRate.id %>')" id="reviewDeleteButton<%= userRate.id %>" class="btn btn-SnowBots"><i class="fad fa-trash"></i>&nbsp;Delete</button>
+                              &nbsp;<button data-toggle="modal" data-target="#reply<%= userRate.id %>" id="replyButton" class="btn btn-Acorn"><i class="fad fa-reply"></i>&nbsp;Reply</button>
+                              &nbsp;<button onclick="clickOnDeletReview('<%= userRate.id %>')" id="reviewDeleteButton<%= userRate.id %>" class="btn btn-Acorn"><i class="fad fa-trash"></i>&nbsp;Delete</button>
                                 <div class="modal fade" id="reply<%= userRate.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content" style="background-color: var(--bg-card)">
                                       <div class="modal-header">
                                         <h5 class="modal-title" style="color: var(--body-text)!important;" id="exampleModalLongTitle">Replying to <%= userRate ? userRate.tag : 'deleted#0000' %></h5>
-                                        <button type="button" class="btn btn-SnowBots" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="btn btn-Acorn" data-dismiss="modal" aria-label="Close">
                                           <span aria-hidden="true"><i class="fad fa-times fa-lg"></i></span>
                                         </button>
                                       </div>
@@ -439,7 +439,7 @@
                                         </div>
                                       </div>
                                       <div class="modal-footer">
-                                        <button type="button" onclick="clickOnReply('<%= userRate.id %>')" id="myReplyButton<%= userRate.id %>" class="btn btn-SnowBots">
+                                        <button type="button" onclick="clickOnReply('<%= userRate.id %>')" id="myReplyButton<%= userRate.id %>" class="btn btn-Acorn">
                                         <i class="fad fa-reply"></i>&nbsp;Reply</button>
                                       </form>
                                       </div>
@@ -448,16 +448,16 @@
                                 </div>
                              <% }} %>
                              <% if(userRate.id == req.user.id) { %>
-                              &nbsp;<button class="btn btn-SnowBots" data-toggle="modal" data-target="#edit<%= userRate.id %>" id="editButton"><i class="fad fa-pencil"></i>&nbsp;Edit</button>
+                              &nbsp;<button class="btn btn-Acorn" data-toggle="modal" data-target="#edit<%= userRate.id %>" id="editButton"><i class="fad fa-pencil"></i>&nbsp;Edit</button>
                               <% if(req.user.id != botdata.ownerID && !botdata.coowners.includes(req.user.id)) { %>
-                              &nbsp;<button onclick="clickOnDeletReview('<%= userRate.id %>')" id="reviewDeleteButton<%= userRate.id %>" class="btn btn-SnowBots"><i class="fad fa-trash"></i>&nbsp;Delete</button>
+                              &nbsp;<button onclick="clickOnDeletReview('<%= userRate.id %>')" id="reviewDeleteButton<%= userRate.id %>" class="btn btn-Acorn"><i class="fad fa-trash"></i>&nbsp;Delete</button>
                               <% } %>
                                 <div class="modal fade" id="edit<%= userRate.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content" style="background-color: var(--bg-card)">
                                       <div class="modal-header">
                                         <h5 class="modal-title" style="color: var(--body-text)!important;" id="exampleModalLongTitle">Editing review to <%= userRate ? userRate.tag : 'deleted#0000' %></h5>
-                                        <button type="button" class="btn btn-SnowBots" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="btn btn-Acorn" data-dismiss="modal" aria-label="Close">
                                           <span aria-hidden="true"><i class="fad fa-times fa-lg"></i></span>
                                         </button>
                                       </div>
@@ -480,7 +480,7 @@
                                 <br>
                                       </div>
                                       <div class="modal-footer">
-                                        <button type="button" onclick="clickOnMessage('<%= userRate.id %>')" id="myEditButton<%= userRate.id %>" class="btn btn-SnowBots">
+                                        <button type="button" onclick="clickOnMessage('<%= userRate.id %>')" id="myEditButton<%= userRate.id %>" class="btn btn-Acorn">
                                         <i class="fad fa-save"></i>&nbsp;Save</button>
                                       </form>
                                       </div>
@@ -499,7 +499,7 @@
                     <div class="rating-cards col-md-12">
                     <div class="ml-5">
                         <div class="ml-4 media p-2">
-                          <img class="mr-3 rounded-circle" alt="SnowBots-cf | Rating System" onError="imgError(this)" src="<%= botdata.avatar %>" />
+                          <img class="mr-3 rounded-circle" alt="Acorn-cf | Rating System" onError="imgError(this)" src="<%= botdata.avatar %>" />
                             <div class="media-body">
                                 <div class="row">
                                     <div class="col-8 d-flex">
@@ -512,14 +512,14 @@
                              <% if(req.user) { %>
                              <% if(req.user.id === botdata.ownerID || botdata.coowners.includes(req.user.id)) { %>
                              <div class="buttons mr-5" style="margin-right: 10px; float: right">
-                              <button onclick="replyTo('<%= userRate.id %>')" data-toggle="modal" data-target="#editReply<%= userRate.id %>" id="replyButton" class="btn btn-SnowBots"><i class="fad fa-pencil"></i>&nbsp;Edit</button>
-                              &nbsp;<button onclick="clickOnDeletReply('<%= userRate.id %>')" id="replyDeleteButton<%= userRate.id%>" class="btn btn-SnowBots"><i class="fad fa-trash"></i>&nbsp;Delete</button>
+                              <button onclick="replyTo('<%= userRate.id %>')" data-toggle="modal" data-target="#editReply<%= userRate.id %>" id="replyButton" class="btn btn-Acorn"><i class="fad fa-pencil"></i>&nbsp;Edit</button>
+                              &nbsp;<button onclick="clickOnDeletReply('<%= userRate.id %>')" id="replyDeleteButton<%= userRate.id%>" class="btn btn-Acorn"><i class="fad fa-trash"></i>&nbsp;Delete</button>
                                 <div class="modal fade" id="editReply<%= userRate.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content" style="background-color: var(--bg-card)">
                                       <div class="modal-header">
                                         <h5 class="modal-title" style="color: var(--body-text)!important;" id="exampleModalLongTitle">Replying to <%= userRate ? userRate.tag : 'deleted#0000' %></h5>
-                                        <button type="button" class="btn btn-SnowBots" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="btn btn-Acorn" data-dismiss="modal" aria-label="Close">
                                           <span aria-hidden="true"><i class="fad fa-times fa-lg"></i></span>
                                         </button>
                                       </div>
@@ -531,7 +531,7 @@
                                         </div>
                                       </div>
                                       <div class="modal-footer">
-                                        <button type="button" onclick="clickOnEditReply('<%= userRate.id %>')" id="clickOnEditReply<%= userRate.id %>" class="btn btn-SnowBots">
+                                        <button type="button" onclick="clickOnEditReply('<%= userRate.id %>')" id="clickOnEditReply<%= userRate.id %>" class="btn btn-Acorn">
                                         <i class="fad fa-reply"></i>&nbsp;Reply</button>
                                       </form>
                                       </div>
@@ -568,7 +568,7 @@
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: "You forgot to write a reply message.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 })
                 $("#myReplyButton" + userID).html('<i class="fad fa-save"></i>&nbsp;Save');
                 $("#myReplyButton" + userID).attr("disabled", false);
@@ -580,7 +580,7 @@
                     title: 'Successful...',
                     allowOutsideClick: false,
                     text: "Your reply has been successfully added.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         return document.getElementById('myReplyForm' + userID).submit();
@@ -592,7 +592,7 @@
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: "An unknown error has occurred.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 })
                 $("#myReplyButton" + userID).html('<i class="fad fa-save"></i>&nbsp;Save');
                 $("#myReplyButton" + userID).attr("disabled", false);
@@ -610,7 +610,7 @@
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: "You forgot to write a new message.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 })
                 $("#myEditButton" + userID).html('<i class="fad fa-save"></i>&nbsp;Save');
                 $("#myEditButton" + userID).attr("disabled", false);
@@ -622,7 +622,7 @@
                     title: 'Successful...',
                     allowOutsideClick: false,
                     text: "Your reply has been successfully added.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         return document.getElementById('myEditForm' + userID).submit();
@@ -634,7 +634,7 @@
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: "An unknown error has occurred.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 })
                 $("#myEditButton" + userID).html('<i class="fad fa-save"></i>&nbsp;Save');
                 $("#myEditButton" + userID).attr("disabled", false);
@@ -652,7 +652,7 @@
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: "You forgot to write a new message.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 })
                 $("#clickOnEditReply" + userID).html('<i class="fad fa-save"></i>&nbsp;Save');
                 $("#clickOnEditReply" + userID).attr("disabled", false);
@@ -664,7 +664,7 @@
                     title: 'Successful...',
                     allowOutsideClick: false,
                     text: "Your reply has been successfully added.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         return document.getElementById('myReplyEditForm' + userID).submit();
@@ -676,7 +676,7 @@
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: "An unknown error has occurred.",
-                    footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+                    footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
                 })
                 $("#clickOnEditReply" + userID).html('<i class="fad fa-save"></i>&nbsp;Save');
                 $("#clickOnEditReply" + userID).attr("disabled", false);
@@ -706,7 +706,7 @@
           title: 'Successful...',
           allowOutsideClick: false,
           text: "Your reply has been successfully deleted.",
-          footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+          footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
       })
       $.ajax({
         type: "POST",
@@ -748,7 +748,7 @@
           title: 'Successful...',
           allowOutsideClick: false,
           text: "Your review has been successfully deleted.",
-          footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+          footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
       })
       $.ajax({
         type: "POST",
@@ -774,21 +774,21 @@
 <%
 if (page != 1) {
 %>
-<a data-tooltip="Previous Page" data-tooltip-location="top" href="/bot/<%= req.params.botID %>?page=<%= page-1; %>" class="mr-1 btn btn-SnowBots p-2">
+<a data-tooltip="Previous Page" data-tooltip-location="top" href="/bot/<%= req.params.botID %>?page=<%= page-1; %>" class="mr-1 btn btn-Acorn p-2">
     <i class="fad fa-arrow-left"></i>
 </a>
   <% } else { %>
-    <a disabled="" class="btn btn-SnowBots p-2 mr-1" style="opacity: 0.5;" style="color: #fff!important">
+    <a disabled="" class="btn btn-Acorn p-2 mr-1" style="opacity: 0.5;" style="color: #fff!important">
         <i class="fad fa-arrow-left"></i>
     </a>
   <% } %>
-  <a data-tooltip="Current Page" data-tooltip-location="top" class="btn btn-SnowBots mr-1" style="color: #fff!important" disabled="">
+  <a data-tooltip="Current Page" data-tooltip-location="top" class="btn btn-Acorn mr-1" style="color: #fff!important" disabled="">
     <%= page %>
   </a>
   <%
   if (page != Math.ceil(data.length / 6) && data.length > 0) {
   %>
-  <a data-tooltip="Next Page" data-tooltip-location="top" href="/bot/<%= req.params.botID %>?page=<%= Number(page)+ Number(1); %>" class="btn btn-SnowBots p-2">
+  <a data-tooltip="Next Page" data-tooltip-location="top" href="/bot/<%= req.params.botID %>?page=<%= Number(page)+ Number(1); %>" class="btn btn-Acorn p-2">
     <i class="fad fa-arrow-right"></i>
 </a>
   <% } %></div>

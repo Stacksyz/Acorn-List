@@ -5,7 +5,7 @@ const client = global.Client;
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[SnowBots.cf]: Admin/CodeShare/Add router loaded.");
+console.log("[Acorn.ink]: Admin/CodeShare/Add router loaded.");
 
 app.post("/admin/addcode", global.checkAuth, async (req, res) => {
     const rBody = req.body;
@@ -36,8 +36,8 @@ app.post("/admin/addcode", global.checkAuth, async (req, res) => {
     }
     client.channels.cache.get(global.config.server.channels.codelog).send(new Discord.MessageEmbed()
         .setTitle("New code added!").setColor("GREEN").setFooter(config.footer)
-        .setDescription(`The user named **[${req.user.username}](https://SnowBots.cf/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
-        .addField("Code Link", `https://SnowBots.cf/codes/view/${kod}`, true)
+        .setDescription(`The user named **[${req.user.username}](https://list.acorn.ink/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
+        .addField("Code Link", `https://list.acorn.ink/codes/view/${kod}`, true)
         .addField("Code Description", rBody['codedesc'], true)
         .addField("Code Category", rBody['category'], true)
     )

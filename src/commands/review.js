@@ -10,7 +10,7 @@ module.exports.run = async (client,message,args) => {
 
     client.channels.cache.get("878005906326044722").send(new MessageEmbed()
      .setAuthor(`${message.author.username} Left us a review!`)
-      .setDescription('**User Reviwed SnowBots.cf!**')
+      .setDescription('**User Reviwed Acorn.ink!**')
       .addFields(
 
   { name: `User That Reviwed:`, value: `${message.author.username}` ,inline: true },

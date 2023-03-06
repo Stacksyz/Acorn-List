@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const db = require("../../database/models/servers/server.js");
 
-console.log("[SnowBots.cf/servers]: Search router loaded.");
+console.log("[Acorn.ink/servers]: Search router loaded.");
 
 app.get("/search", async (req, res) => {
     let page = req.query.page || 1;

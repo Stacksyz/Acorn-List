@@ -4,7 +4,7 @@ const client = global.clientSL;
 const channels = global.config.server.channels;
 const Discord = require('discord.js')
 
-console.log("[SnowBots.cf/servers]: Edit router loaded.");
+console.log("[Acorn.ink/servers]: Edit router loaded.");
 
 app.get("/:guildID/announcement", global.checkAuth, async (req, res) => {
     let serverData = await sdata.findOne({
@@ -92,7 +92,7 @@ app.post("/:guildID/announcement", global.checkAuth, async (req, res) => {
             annoucementdate: datum,
         }
     }, function(err, docs) { })
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:870019650593910875> Ann Post`).setDescription(`<:edited:870019650593910875> **${req.user.username}** Posted an announcement for **${guild.name}** \n [Click here to view it!](https://SnowBots.cf/server/${guild.id}/)`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:870019650593910875> Ann Post`).setDescription(`<:edited:870019650593910875> **${req.user.username}** Posted an announcement for **${guild.name}** \n [Click here to view it!](https://list.acorn.ink/server/${guild.id}/)`))
     return res.send({
         success: true,
         message: "Successfully Announcemented"

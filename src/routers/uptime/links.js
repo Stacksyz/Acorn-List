@@ -6,7 +6,7 @@ const roles = global.config.server.roles,
 const client = global.Client;
 const Discord = require("discord.js");
 
-console.log("[SnowBots.cf]: Uptime/Links router loaded.");
+console.log("[Acorn.ink]: Uptime/Links router loaded.");
 
 app.get("/links", global.checkAuth, async (req,res) => {
     let uptimes = await uptimedata.find({ userID: req.user.id })

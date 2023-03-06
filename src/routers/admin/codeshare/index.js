@@ -4,7 +4,7 @@ const client = global.Client;
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[SnowBots.cf]: Admin/CodeShare/Index router loaded.");
+console.log("[Acorn.ink]: Admin/CodeShare/Index router loaded.");
 
 app.get("/admin/codes", global.checkAuth, async (req, res) => {
     let koddata = await codesSchema.find();

@@ -18,7 +18,7 @@ exports.run = async (client, message, args, customisation, tools) => {
     .setColor("#ff9900")
     .setTitle(`${message.mentions.users.first().username}, you got poked by ${message.author.username}`)
     .setImage(body.url) 
-    .setFooter(`© SnowBots.cf 2020 - 2021`);
+    .setFooter(`© Acorn.ink 2020 - 2021`);
     message.channel.send({embed})
 };
 

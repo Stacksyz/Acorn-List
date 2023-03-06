@@ -1,15 +1,15 @@
 <%- include('../parts/head', {bot, user, path}) %>
 
-<section class="jumbotron SnowBots">
+<section class="jumbotron Acorn">
     <br><br>
     <div class="container px-3 mb-5 mt-1">
       <div class="mb-3 mx-auto">
        <span class="icon-section" style="margin-top: -5%;float: right;">
-        <img  draggable="false" style="z-index: -1!important;" class="section-img" title="SnowBots.cf"  src="../img/logo.png" width="320" alt="Discord Bots | Discord Bot List">
+        <img  draggable="false" style="z-index: -1!important;" class="section-img" title="Acorn.ink"  src="../img/logo.png" width="320" alt="Discord Bots | Discord Bot List">
         </span>
         
-        <h1 class="title" translate="no" style="font-weight: 800;color: #fff">SnowBots-Servers</h1>
-        <p class="content" style="opacity: 0.6; margin-top: -20px;color: #fff">Find the best server with SnowBots!</p>
+        <h1 class="title" translate="no" style="font-weight: 800;color: #fff">Acorn-Servers</h1>
+        <p class="content" style="opacity: 0.6; margin-top: -20px;color: #fff">Find the best server with Acorn!</p>
         
             <div>
               <div class="z">
@@ -30,15 +30,15 @@
         <i class="fal fa-spinner fa-pulse is-size-3"></i>
         </span>
             <span id="searchResults"><i class="fal fa-bug"></i>&nbsp;Start Typing to search Something.</span>
-            <button style="display:none;" class="btn btn-SnowBots showMore"><i class="fal fa-list"></i> Show More</button>
+            <button style="display:none;" class="btn btn-Acorn showMore"><i class="fal fa-list"></i> Show More</button>
         </div>
         </div>
                   <input type="hidden" name="page" value="1">
                 </form>
           <% global.config.website.servers.tags.slice(0, 3).map(tag => { %>
-          	<a title="SnowBots" href="/servers/tag/<%= tag.name %>" class="btn btn-SnowBots"><i class="<%= tag.icon %>"></i>&nbsp;<%= tag.name %></a>
+          	<a title="Acorn" href="/servers/tag/<%= tag.name %>" class="btn btn-Acorn"><i class="<%= tag.icon %>"></i>&nbsp;<%= tag.name %></a>
           <% }) %>
-          	<a title="SnowBots" href="/servers/tags" class="btn btn-SnowBots"><i class="fal fa-tags"></i>&nbsp;Explore Tags</a>
+          	<a title="Acorn" href="/servers/tags" class="btn btn-Acorn"><i class="fal fa-tags"></i>&nbsp;Explore Tags</a>
               </div>
       </div>
     </div>
@@ -87,7 +87,7 @@
                 message += `
                 <a href="/server/${server.id}">
                 <div translate="no" class="mt-2 resultBotBanner">
-                  <img title="SnowBots.cf" class="mr-2" width="48" onError="imgError(this)" style="border-radius: 8px;" src="${server.icon}" />${server.name}
+                  <img title="Acorn.ink" class="mr-2" width="48" onError="imgError(this)" style="border-radius: 8px;" src="${server.icon}" />${server.name}
                 </div>
             </a>
             `;
@@ -134,15 +134,15 @@
 
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -158,11 +158,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -181,15 +181,15 @@
 
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -205,11 +205,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -240,15 +240,15 @@
     <% let guildCache = bot.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span><span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span><span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= guildCache.name %>
@@ -264,11 +264,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -286,15 +286,15 @@
      <% let guildCache = bot.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span><span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span><span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -310,11 +310,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -332,15 +332,15 @@
      <% let guildCache = bot.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -356,11 +356,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -379,15 +379,15 @@
      <% let guildCache = bot.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -403,11 +403,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -417,7 +417,7 @@
 </div>
       <% if(data.filter(a => bot.guilds.cache.get(a.id) && a.tags.includes('Development')).length > 6) { %>
   	  <center>
-	    <a title="SnowBots" href="/servers/tag/Development" class="btn btn-more has-text-white">Show more Development servers</a>
+	    <a title="Acorn" href="/servers/tag/Development" class="btn btn-more has-text-white">Show more Development servers</a>
 	  </center>
       <% } %>
 
@@ -432,15 +432,15 @@
      <% let guildCache = bot.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -456,11 +456,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -470,7 +470,7 @@
 </div>
       <% if(data.filter(a => bot.guilds.cache.get(a.id) && a.tags.includes('Stream')).length > 6) { %>
   	  <center>
-	    <a title="SnowBots" href="/servers/tag/Stream" class="btn btn-more has-text-white">Show more Stream servers</a>
+	    <a title="Acorn" href="/servers/tag/Stream" class="btn btn-more has-text-white">Show more Stream servers</a>
 	  </center>
       <% } %>
 
@@ -487,16 +487,16 @@
      <% let guildCache = bot.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : '../img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
 
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span>             <span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount > 999 ? guildCache.memberCount.toLocaleString().split(',')[0]+'k' : guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -512,11 +512,11 @@
               <span data-tooltip="Premium Server" data-tooltip-location="top"><i class="fad fa-bahai has-text-success"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -526,7 +526,7 @@
 </div>
       <% if(data.filter(a => bot.guilds.cache.get(a.id) && a.tags.includes('Media')).length > 6) { %>
   	  <center>
-	    <a title="SnowBots" href="/servers/tag/Media" class="btn btn-more has-text-white">Show more Media servers</a>
+	    <a title="Acorn" href="/servers/tag/Media" class="btn btn-more has-text-white">Show more Media servers</a>
 	  </center>
       <% } %>
 </div>
@@ -541,7 +541,7 @@
      title: 'Successful...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy  SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy  Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/servers#`;
@@ -553,7 +553,7 @@
      icon: 'error',
      title: 'Wrong...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/servers#`;

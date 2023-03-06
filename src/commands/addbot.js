@@ -7,12 +7,12 @@ module.exports.run = async (client,message,args) => {
   let bots = await x.filter(a => a.ownerID == message.author.id || a.coowners.includes(message.author.id))
    const embed = new Discord.MessageEmbed()
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-   .setDescription(`<a:yes:833101995723194437> **[SnowBots Add bot](https://SnowBots.cf)** <a:yes:833101995723194437>\n\nyou can add your bot [here](https://SnowBots.cf/addbot)`)
+   .setDescription(`<a:yes:833101995723194437> **[Acorn Add bot](https://list.acorn.ink)** <a:yes:833101995723194437>\n\nyou can add your bot [here](https://list.acorn.ink/addbot)`)
    .setColor("#7289da")
-   .setFooter('Powered by SnowBots.cf')
+   .setFooter('Powered by Acorn.ink')
       let button = new MessageButton()
   .setStyle('url')
-  .setURL('https://SnowBots.cf/addbot') 
+  .setURL('https://list.acorn.ink/addbot') 
   .setLabel('Add your bot')
     .setEmoji('870019597791805521');
 

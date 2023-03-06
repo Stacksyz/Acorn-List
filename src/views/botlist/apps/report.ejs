@@ -2,7 +2,7 @@
      <br><br>
 <div class="container">
   <br><br>
-<div class="container contact-form bg-vote-SnowBots">
+<div class="container contact-form bg-vote-Acorn">
   <div class="contact-image">
       <i></i>
   </div>
@@ -40,7 +40,7 @@
      title: 'Succesfull...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/bot/${urlParams.get('botID')}`;
@@ -52,7 +52,7 @@
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/${urlParams.get('botID')}/report`;

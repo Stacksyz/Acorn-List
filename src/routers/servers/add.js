@@ -5,7 +5,7 @@ const roles = global.config.server.roles;
 const channels = global.config.server.channels;
 const Discord = require('discord.js');
 
-console.log("[SnowBots.cf/servers]: Add Server router loaded.");
+console.log("[Acorn.ink/servers]: Add Server router loaded.");
 
 app.get("/add", global.checkAuth, async (req,res) => {
   if(!client.guilds.cache.get(config.server.id).members.cache.get(req.user.id)) return res.redirect("/error?code=403&message=To do this, you have to join our discord server.");
@@ -85,7 +85,7 @@ app.post("/add", global.checkAuth, async (req,res) => {
         let checkGuilds = await db.findOne({ id: guildID });
     let guilda = client.guilds.cache.get(global.config.server.id)
     guilda.members.cache.get(checkGuilds.ownerID).roles.add(global.config.server.roles.botlist.ownerserver);
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:plus:870019597791805521> Server Add`).setDescription(`<:plus:870019597791805521> <@${checkGuilds.ownerID}> added **${guild.name}** \n [Click here to view it!](https://SnowBots.cf/server/${checkGuilds.id}/)`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:plus:870019597791805521> Server Add`).setDescription(`<:plus:870019597791805521> <@${checkGuilds.ownerID}> added **${guild.name}** \n [Click here to view it!](https://list.acorn.ink/server/${checkGuilds.id}/)`))
     return res.send({ success: true, message: "Server succesfuly added." });
 })
 

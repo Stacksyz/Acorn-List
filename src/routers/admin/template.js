@@ -4,7 +4,7 @@ const channels = global.config.server.channels,
 const client = global.Client;
 const path = require("path");
 
-console.log("[SnowBots.cf]: Admin/Emoji router loaded.");
+console.log("[Acorn.ink]: Admin/Emoji router loaded.");
 function createID(length) {
     var result = '';
     var characters = '123456789';

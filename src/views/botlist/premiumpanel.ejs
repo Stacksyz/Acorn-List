@@ -9,11 +9,11 @@ color: gray;
 </style>
 <div class="container px-3 mt-2 pt-5">
     <div class="container px-3 content is-widescreen pt-5">
-        <div class="bg-vote-SnowBots pt-5">
-<div class="bg-vote-SnowBots pt-5">
+        <div class="bg-vote-Acorn pt-5">
+<div class="bg-vote-Acorn pt-5">
 <h3 class="has-text-white is-size-3" style="margin-bottom: 10px;"> </h3>
 <center>
-<h3 style="color:white; text-shadow: 2px 2px 5px black;" translate="no" color="" id="fat">SnowBots Premium Panel
+<h3 style="color:white; text-shadow: 2px 2px 5px black;" translate="no" color="" id="fat">Acorn Premium Panel
 </h3>
 <center>
     <button onclick="location.href='https://adblockplus.org/'" class="btn btn-danger"><i class="fad fa-check"></i>&nbsp;Click here visit the Ad Blocker!</button>
@@ -23,12 +23,12 @@ color: gray;
     <p class="text-muted">
 <strong>Choice 1</strong>
 <span class="badge badge-danger bg-prem">Premium User Widget</span><br>
-<a class="btn btn-SnowBots" href="/api/premium/user/<%=user.id%>"><i class="fad fa-pencil"></i> Premium User Widget</a>
+<a class="btn btn-Acorn" href="/api/premium/user/<%=user.id%>"><i class="fad fa-pencil"></i> Premium User Widget</a>
 <center>
 <br>
 <strong>Choice 2</strong>
 <span class="badge badge-danger bg-prem">Premium User Widget 2</span><br>
-<a class="btn btn-SnowBots" href="/api/premium/user/<%=user.id%>/purple"><i class="fad fa-pencil"></i> Premium User Widget 2</a>
+<a class="btn btn-Acorn" href="/api/premium/user/<%=user.id%>/purple"><i class="fad fa-pencil"></i> Premium User Widget 2</a>
 <center>
 <br>
 <br>
@@ -49,7 +49,7 @@ color: gray;
      title: 'Successful...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy  SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy  Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/premium/panel`;
@@ -61,7 +61,7 @@ color: gray;
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/premium`;

@@ -59,7 +59,7 @@
             <span data-tooltip="<%=certifiedDeveloper.name%>" data-tooltip-location="top"> <i class="fad fa-badge-check" style="color: <%=certifiedDeveloper.hexColor%>;bottom: -5px; font-size: 26px;"></i></span>
             <% } %>
             <% if (partnerRoleCache) { %>
-            <span data-tooltip="SnowBots Partner"><img draggable="false" src="https://img.devsforum.net/tr/img/i9Y7Y1.png" width="32px"></span></span>
+            <span data-tooltip="Acorn Partner"><img draggable="false" src="https://img.devsforum.net/tr/img/i9Y7Y1.png" width="32px"></span></span>
             <% } %>
             <% if (promotedDeveloper) { %>
             <span data-tooltip="<%=promotedDeveloper.name%>" data-tooltip-location="top"> <i class="fas fa-stars has-text-warning" style="color: <%=promotedDeveloper.hexColor%>;bottom: -5px; font-size: 26px;"></i></span>
@@ -71,13 +71,13 @@
             <span data-tooltip="<%=boosters.name%>" data-tooltip-location="top"> <span data-tooltip="Server Booster" data-tooltip-location="top"><img draggable="false" src="https://discord.com/assets/5a24b20b84fb3eafc138916729386e76.svg" width="32px"></span></span>
             <% } %>
             <% if (donator) { %>
-            <span data-tooltip="SnowBots Donator" data-tooltip-location="top"><img draggable="false" src="https://cdn2.iconfinder.com/data/icons/banking-glyph-circle/614/970_-_Charity-512.png" width="32px"></span></span>
+            <span data-tooltip="Acorn Donator" data-tooltip-location="top"><img draggable="false" src="https://cdn2.iconfinder.com/data/icons/banking-glyph-circle/614/970_-_Charity-512.png" width="32px"></span></span>
             <% } %>
             <% if (supporterRole) { %>
             <span data-tooltip="<%=supporterRole.name%>" data-tooltip-location="top"> <i class="fad fa-star" style="color: <%=supporterRole.hexColor%>;bottom: -5px; font-size: 26px;"></i></span>
             <% } %>
             <% if (premiumuser) { %>
-            <span data-tooltip="<%=premiumuser.name%>" data-tooltip-location="top"> <span data-tooltip="SnowBots Premium User" data-tooltip-location="top"><img draggable="false" src="https://th.bing.com/th/id/R.0ef3a7f3a5163ad5f2f43de9ffea0784?rik=gnjPHVJxdeNjzQ&pid=ImgRaw&r=0" width="32px"></span></span>
+            <span data-tooltip="<%=premiumuser.name%>" data-tooltip-location="top"> <span data-tooltip="Acorn Premium User" data-tooltip-location="top"><img draggable="false" src="https://th.bing.com/th/id/R.0ef3a7f3a5163ad5f2f43de9ffea0784?rik=gnjPHVJxdeNjzQ&pid=ImgRaw&r=0" width="32px"></span></span>
             <% } %>
             <% if (developer) { %>
             <span data-tooltip="<%=developer.name%>" data-tooltip-location="top"> <i class="fad fa-code user__badge has-text-info" style="color: <%=developer.hexColor%>;bottom: -5px; font-size: 26px;"></i></span>
@@ -89,10 +89,10 @@
             <span data-tooltip="Python Coder" data-tooltip-location="top"><img draggable="false" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" width="32px"></span></span>
             <% } %>
             <% if (bh) { %>
-            <span data-tooltip="<%=bh.name%>" data-tooltip-location="top"> <span data-tooltip="SnowBots Bug Hunter" data-tooltip-location="top"><img draggable="false" src="https://cdn.discordapp.com/emojis/877410895255461939.png?v=1" width="32px"></span></span>
+            <span data-tooltip="<%=bh.name%>" data-tooltip-location="top"> <span data-tooltip="Acorn Bug Hunter" data-tooltip-location="top"><img draggable="false" src="https://cdn.discordapp.com/emojis/877410895255461939.png?v=1" width="32px"></span></span>
             <% } %> 
             <% if (gbh) { %>
-            <span data-tooltip="<%=bh.name%>" data-tooltip-location="top"> <span data-tooltip="SnowBots Golden Bug Hunter" data-tooltip-location="top"><img draggable="false" src="https://cdn.discordapp.com/emojis/877410954911023124.png?v=1" width="32px"></span></span>
+            <span data-tooltip="<%=bh.name%>" data-tooltip-location="top"> <span data-tooltip="Acorn Golden Bug Hunter" data-tooltip-location="top"><img draggable="false" src="https://cdn.discordapp.com/emojis/877410954911023124.png?v=1" width="32px"></span></span>
             <% } %> 
             <% if (serverowner) { %>
             <span data-tooltip="<%=serverowner.name%>" data-tooltip-location="top"> <i class="fa fa-crown has-text-warning" style="color: <%=serverowner.hexColor%>;bottom: -5px; font-size: 26px;"></i></span>
@@ -113,7 +113,7 @@
             <% } }) %>
             <% } %> 
             <% if(bannedCheck) { %>
-            &nbsp;<span data-tooltip="Banned from SnowBots" data-tooltip-location="top"> <i class="fad fa-ban has-text-danger" style="color: RED;bottom: -5px; font-size: 26px;"></i></span>
+            &nbsp;<span data-tooltip="Banned from Acorn" data-tooltip-location="top"> <i class="fad fa-ban has-text-danger" style="color: RED;bottom: -5px; font-size: 26px;"></i></span>
             <% } %>
             </div>
             <% if(pdata) {%>
@@ -127,27 +127,27 @@
             <% } %>
 	    <%if(req.user) {%>
             <% if(req.user.id === member.id) {%>
-                <a class="btn btn-SnowBots" href="/user/<%=member.id%>/edit"><i class="fad fa-pencil"></i> Edit Profile</a>
+                <a class="btn btn-Acorn" href="/user/<%=member.id%>/edit"><i class="fad fa-pencil"></i> Edit Profile</a>
                 <% } %>
 		<% } %>
         </div>
         <div class="is-4 mt-1 column">
             <% if(pdata) {%>
             <% if(pdata.coins) { %>     
-            <a href="https://SnowBots.cf/user/<%= req.params.userID %>" class="is-flex mt-1">
+            <a href="https://list.acorn.ink/user/<%= req.params.userID %>" class="is-flex mt-1">
                       <div style="background: rgb(8, 8, 8)" class="box-2-p"></div>
-                      <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2">SnowBots Coins: <%=pdata.coins%></p>
+                      <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2">Acorn Coins: <%=pdata.coins%></p>
                     </a>        
             <% } else { %>
-            <a href="https://SnowBots.cf/user/<%= req.params.userID %>" class="is-flex mt-1">
+            <a href="https://list.acorn.ink/user/<%= req.params.userID %>" class="is-flex mt-1">
                       <div style="background: rgb(8, 8, 8)" class="box-2-p"></div>
-                      <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2">SnowBots Coins: 0</p>
+                      <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2">Acorn Coins: 0</p>
                     </a>        
             <% } %>
             <% } else { %>
-            <a href="https://SnowBots.cf/user/<%= req.params.userID %>" class="is-flex mt-1">
+            <a href="https://list.acorn.ink/user/<%= req.params.userID %>" class="is-flex mt-1">
                       <div style="background: rgb(8, 8, 8)" class="box-2-p"></div>
-                      <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2"><i class="">SnowBots Coins: 0</p>
+                      <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2"><i class="">Acorn Coins: 0</p>
                     </a>  
             <% } %>
             <% if(pdata) {%>
@@ -175,7 +175,7 @@
                     <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2">Github</p>
                   </a>
                   <% } %>
-                  <a href="https://SnowBots.cf/api/user/<%= req.params.userID %>" class="is-flex mt-1">
+                  <a href="https://list.acorn.ink/api/user/<%= req.params.userID %>" class="is-flex mt-1">
                     <div style="background: rgb(0, 0, 0);" class="box-2-p"><i class="fad fa-robot is-size-6 mt-1"></i></div>
                     <p style="background: rgb(8, 8, 8);color: #fff!important" class="box-2">User Widget</p>
                   </a>
@@ -195,14 +195,14 @@
       <% botdata.filter(a => (member.id === a.ownerID || a.coowners.includes(member.id))).sort((a, b) => b.votes - a.votes).map(a => {%>
       <% if(a.status == "Approved") { %>
         <div class="col-md-6 col-lg-4 pb-3">
-          <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-            <div class="SnowBots-card-custom-img" style="background-image: url(<%= a.backURL || "../../img/undefined_back.png" %>);"></div>
-            <div class="SnowBots-card-custom-avatar">
+          <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+            <div class="Acorn-card-custom-img" style="background-image: url(<%= a.backURL || "../../img/undefined_back.png" %>);"></div>
+            <div class="Acorn-card-custom-avatar">
               <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
             </div>
             <div class="card-body">
-             <div class="is-pulled-right mt-SnowBots mt-1">
-                  <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
+             <div class="is-pulled-right mt-Acorn mt-1">
+                  <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
                   <span data-tooltip="Server Count" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-server"></i>&nbsp;<%= a.serverCount || "N/A" %></span>
                 </div>
               <h4 translate="no" class="card-title"><%= a.username %>
@@ -210,7 +210,7 @@
                 <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span>
               <% } %>
               </h4>
-              <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+              <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
             </div>
             <div class="card-footer">
               <a href="/bot/<%=a.botID%>" class="btn  btn-bot">View</a>
@@ -224,14 +224,14 @@
       if(req.user.id === a.ownerID || a.coowners.includes(req.user.id)) { 
       %>
         <div class="col-md-6 col-lg-4 pb-3">
-          <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-            <div class="SnowBots-card-custom-img" style="background-image: url(<%= a.backURL || "../../img/undefined_back.png" %>);"></div>
-            <div class="SnowBots-card-custom-avatar">
+          <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+            <div class="Acorn-card-custom-img" style="background-image: url(<%= a.backURL || "../../img/undefined_back.png" %>);"></div>
+            <div class="Acorn-card-custom-avatar">
               <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
             </div>
             <div class="card-body">
-             <div class="is-pulled-right mt-SnowBots mt-1">
-                  <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
+             <div class="is-pulled-right mt-Acorn mt-1">
+                  <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
                   <span data-tooltip="Server Count" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-server"></i>&nbsp;<%= a.serverCount || "N/A" %></span>
                 </div>
               <h4 translate="no" class="card-title"><%= a.username %>
@@ -239,7 +239,7 @@
                 <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span>
               <% } %>
               </h4>
-              <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+              <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
             </div>
             <div class="card-footer">
               <a href="/bot/<%=a.botID%>" class="btn  btn-bot">View</a>
@@ -269,15 +269,15 @@
 <% let guildCache = global.clientSL.guilds.cache.get(a.id) %>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
-        <div class="card SnowBots-card-custom bg-SnowBots border-white border-0">
-          <div class="SnowBots-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : 'https://SnowBots.cf/img/undefined_back.png' %>);" title="SnowBots.cf" ></div>
-          <div class="SnowBots-card-custom-avatar">
+        <div class="card Acorn-card-custom bg-Acorn border-white border-0">
+          <div class="Acorn-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= guildCache.banner ? 'https://cdn.discordapp.com/banners/'+a.id+'/'+guildCache.banner+'?size=1024' : 'https://list.acorn.ink/img/undefined_back.png' %>);" title="Acorn.ink" ></div>
+          <div class="Acorn-card-custom-avatar">
             <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.icon%>" alt="Avatar" />
           </div>
           <div class="card-body">
-           <div class="is-pulled-right mt-SnowBots mt-1" style="max-width: 28.5%!important;">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span><span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
-            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-SnowBots mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
+           <div class="is-pulled-right mt-Acorn mt-1" style="max-width: 28.5%!important;">
+            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes %></span><span data-tooltip="Bumps this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-bomb"></i>&nbsp;<%= a.bumps %></span>
+            <span data-tooltip="Boosts this Month" data-tooltip-location="left" class="badge badge-stats mb-Acorn mt-1 w-100"><i class="fad fa-star"></i>&nbsp;<%= a.boosts %></span>
             <span data-tooltip="Members" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-users"></i>&nbsp;<%= guildCache.memberCount %></span>
               </div>
             <p translate="no" class="card-title is-size-4"><%= a.name %>
@@ -286,11 +286,11 @@
               <i class="fad fa-handshake bodyIcon"></i></span>
             <% } %>
             </p>
-            <p translate="no" class="card-text SnowBotsbotDesc"><%= a.shortDesc %></p>
+            <p translate="no" class="card-text AcornbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="SnowBots" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
-            <a title="SnowBots" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
+            <a title="Acorn" href="/server/<%=a.id%>" class="btn  btn-bot">View</a>
+            <a title="Acorn" href="/server/<%=a.id%>/join" class="btn  btn-bot2">Join</a>
           </div>
         </div>
       </div>
@@ -309,7 +309,7 @@ var urlParams = new URLSearchParams(window.location.search);
      title: 'Successful...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/user/<%= req.params.userID %>`;

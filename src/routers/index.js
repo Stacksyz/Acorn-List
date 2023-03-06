@@ -4,7 +4,7 @@ const db = require("../database/models/servers/server.js");
 const maintenceSchema = require('../database/models/maintence.js');
 const profiledata = require("../database/models/profile.js");
 
-console.log("[SnowBots.cf]: Index router loaded.");
+console.log("[Acorn.ink]: Index router loaded.");
 
 
 app.get("/", async (req,res) => {

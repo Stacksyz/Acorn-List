@@ -9,7 +9,7 @@ const reportappsdata = require("../../database/models/botlist/report-apps.js");
 
 
 
-console.log("[SnowBots.cfcf]: Admin/Index router loaded.");
+console.log("[Acorn.inkcf]: Admin/Index router loaded.");
 app.get("/admin", global.checkAuth, async (req, res) => {
 	const botdata = await botsdata.find();
 	const codedata = await codesSchema.find();

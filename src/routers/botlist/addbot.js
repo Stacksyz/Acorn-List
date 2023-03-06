@@ -3,7 +3,7 @@ const app = require('express').Router();
 const botsdata = require("../../database/models/botlist/bots.js");
 const client = global.Client;
 const channels = global.config.server.channels;
-console.log("[SnowBots.cf]: Botlist/Add Bot router loaded.");
+console.log("[Acorn.ink]: Botlist/Add Bot router loaded.");
 
     app.get("/addbot", global.checkAuth, async (req,res) => {
       if(!client.guilds.cache.get(config.server.id).members.cache.get(req.user.id)) return res.redirect("/error?code=403&message=To do this, you have to join our discord server.");
@@ -73,7 +73,7 @@ console.log("[SnowBots.cf]: Botlist/Add Bot router loaded.");
       client.users.fetch(rBody['botID']).then(a => {
 client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed()
     .setTitle(`<:plus:870019597791805521> **${req.user.username}** added **${a.tag}**`)
-    .setDescription(`[Click Here](https://SnowBots.cf/bot/${a.id})`)
+    .setDescription(`[Click Here](https://list.acorn.ink/bot/${a.id})`)
     .setTimestamp()
     .setColor("GREEN")
     .setFooter(`Added By - ${req.user.username}`))

@@ -100,7 +100,7 @@ body {
   background-color: var(--bg-section);  
 }
 
-.bg-SnowBots {
+.bg-Acorn {
     background-color: var(--bg-section);
     color: #fff;
 }
@@ -122,7 +122,7 @@ body {
     animation: gradient 15s ease infinite;
 }
 .bg-upcordh {
-    background: linear-gradient(70deg, rgb(0, 0, 0) 60%, rgba(35, 39, 42, 0.2) 70%), url(https://SnowBots.cf/img/section.svg);
+    background: linear-gradient(70deg, rgb(0, 0, 0) 60%, rgba(35, 39, 42, 0.2) 70%), url(https://list.acorn.ink/img/section.svg);
     background-color: var(--bg-section);
     color: #fff;
 }
@@ -289,14 +289,14 @@ body {
 }
 
 /* Other styles for the page not related to the animated dropdown */
-.btn-outline-SnowBots {
+.btn-outline-Acorn {
   background-color: transparent;
   border: 2px solid #7289da;
   color: #fff;
   font-weight: 500;
   transition: all 0.3s;
 }
-.btn-outline-SnowBots:hover {
+.btn-outline-Acorn:hover {
   background-color: #7289da;
   border: 2px solid #7289da;
   color: #2c2f33;
@@ -881,13 +881,13 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
 
 
 /* Custom Card Horizantal */
-.SnowBots_column {
+.Acorn_column {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center
 }
 
-.SnowBots_teamcard {
+.Acorn_teamcard {
 	margin: 10px 3px;
 	position: relative;
 	width: 300px;
@@ -905,19 +905,19 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
 	user-select: none
 }
 
-.SnowBots_teamcard {
+.Acorn_teamcard {
 	background: #23272a;
 	box-shadow: transparent 0 2px 52px 0;
   transition: all 0.3s;
   border-left: 3px solid;
 }
 
-.SnowBots_teamcard:hover {
+.Acorn_teamcard:hover {
 	transform: translateY(-6px);
 	z-index: 6;
 }
 
-.SnowBots_teamcard .user h1 {
+.Acorn_teamcard .user h1 {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -928,7 +928,7 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
 	margin: 0 0 0 5px
 }
 
-.SnowBots_teamcard .user h2 {
+.Acorn_teamcard .user h2 {
 	width: 98%;
 	font-size: 14px;
 	color: rgb(255 255 255/70%);
@@ -937,13 +937,13 @@ table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, 
 	margin: 0 0 0 5px
 }
 
-.SnowBots_teamcard .avatar img {
+.Acorn_teamcard .avatar img {
 	height: 60px;
 	border-radius: 50%;
 	margin-right: 5px
 }
 
-.SnowBots_teamcard .avatar span {
+.Acorn_teamcard .avatar span {
 	z-index: 1;
 	position: absolute;
 	bottom: 28px;
@@ -1722,13 +1722,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.SnowBots_tippy {
+.Acorn_tippy {
   position: relative;
   transition: all 0.5s ease;
   text-transform: uppercase;
   text-decoration: none;
 }
-.SnowBots_tippy:before {
+.Acorn_tippy:before {
   content: "";
   position: absolute;
   opacity: 0;
@@ -1742,7 +1742,7 @@ body {
   border-width: 10px 10px 0 10px;
   border-color: #282828 transparent transparent transparent;
 }
-.SnowBots_tippy:after {
+.Acorn_tippy:after {
   text-transform: none;
   content: attr(data-tooltip);
   font-size: 14px;
@@ -1762,13 +1762,13 @@ body {
   transform: translate3d(-50%, 0%, 0);
   transition: all 0.1s ease;
 }
-.SnowBots_tippy:hover:before, .SnowBots_tippy:hover:after {
+.Acorn_tippy:hover:before, .Acorn_tippy:hover:after {
   opacity: 1;
 }
-.SnowBots_tippy:hover:before {
+.Acorn_tippy:hover:before {
   transform: translate3d(-50%, calc(-100% - 18px), 0);
 }
-.SnowBots_tippy:hover:after {
+.Acorn_tippy:hover:after {
   transform: translate3d(-50%, calc(-100% - 16px), 0);
 }
 
@@ -2193,7 +2193,7 @@ ul.summary-list > li:last-child  {
 a:hover{
     text-decoration: none;
 }
-.SnowBots_divider {
+.Acorn_divider {
     width: 25%;
     border: 3px solid #fff;
     border-bottom-left-radius: 10px;
@@ -2385,7 +2385,7 @@ a:hover{
   .btn-vote:hover {
     background-color:#5668ac;
   }
-  .bg-vote-SnowBots {
+  .bg-vote-Acorn {
     height: auto;
     width: 100%;
     padding-left: 20px!important;
@@ -2410,7 +2410,7 @@ a:hover{
     justify-content: space-between;
     padding: inherit;
 }
-.SnowBots-logo-nav {
+.Acorn-logo-nav {
     width: 100px;
 }
 
@@ -2516,9 +2516,9 @@ color: #fff!important;
     margin-right: 10px!important;
 }
 
-.jumbotron.SnowBots{
+.jumbotron.Acorn{
     padding-top: 8px!important;
-    background: linear-gradient(70deg, rgba(35, 39, 42, 1) 20%, rgba(35, 39, 42, 0.2) 70%), url(https://SnowBots.cf/img/hi.svg);
+    background: linear-gradient(70deg, rgba(35, 39, 42, 1) 20%, rgba(35, 39, 42, 0.2) 70%), url(https://list.acorn.ink/img/hi.svg);
     background-color: var(--bg-section)
 }
 .bg-transparent {
@@ -2530,14 +2530,14 @@ color: #fff!important;
   color: #fff;
 }
 
-.SnowBots-card-custom {
+.Acorn-card-custom {
   overflow: hidden;
   border-radius: 26px;
   min-height: 450px;
   box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
 }
 
-.SnowBots-card-custom-img {
+.Acorn-card-custom-img {
   height: 200px;
   min-height: 200px;
   background-repeat: no-repeat;
@@ -2545,7 +2545,7 @@ color: #fff!important;
   background-position: center;
   border-color: inherit;
 }
-.SnowBots-card-custom-img::after {
+.Acorn-card-custom-img::after {
   position: absolute;
   content: '';
   top: 161px;
@@ -2562,7 +2562,7 @@ color: #fff!important;
   border-left-color: inherit;
 }
 
-.SnowBots-card-custom-avatar img {
+.Acorn-card-custom-avatar img {
   border-radius: 50%;
   border: 7px solid var(--bg-card);
   position: absolute;
@@ -2587,7 +2587,7 @@ color: #fff!important;
 .btn-group {
   max-width: 100%!important;
 }
-.SnowBotsbotDesc {
+.AcornbotDesc {
   min-height: 95px;
   overflow-y: auto;
   max-height: 95px!important;
@@ -2605,19 +2605,19 @@ color: #fff!important;
 .badge-stats.mt-1 {
     margin-top: -10px!important;
 }
-.mb-SnowBots {
+.mb-Acorn {
     margin-bottom: 13px;
 }
-.mt-SnowBots {
+.mt-Acorn {
   margin-top: -18px!important;
 }
 .is-multiline {
   max-width: 100%;
 }
-.card.SnowBots-card-custom {
+.card.Acorn-card-custom {
   transition: all 0.2s;
 }
-.card.SnowBots-card-custom:hover {
+.card.Acorn-card-custom:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgb(158, 158, 158);
 }
@@ -2892,7 +2892,7 @@ select.language:hover {
   color: #727272!important;
 }
 /* CUSTOM */
-.alert-SnowBots {
+.alert-Acorn {
     background-color: #23272a;
     border-left: 5px solid #f14668;
     color: #fff;
@@ -2911,7 +2911,7 @@ select.language:hover {
     background-color: #23272a;
 }
 
-.btn-SnowBots {
+.btn-Acorn {
   border-radius: 7px;
   background-color: var(--button-green);
   color: var(--button-text-section);
@@ -2921,13 +2921,13 @@ select.language:hover {
   padding-top: 5px;
   transition: all .1s;
 }
-.btn-SnowBots:hover {
+.btn-Acorn:hover {
   border-radius: 9px;
   background-color: var(--button-green-hover);
   color: var(--button-text-section);
   transform: translate(-0%, -10%);
 }
-.btn-SnowBots {
+.btn-Acorn {
   border-radius: 7px;
   background-color: var(--button-green);
   color: var(--button-text-section);
@@ -2937,7 +2937,7 @@ select.language:hover {
   padding-top: 5px;
   transition: all .1s;
 }
-.btn-SnowBots:hover {
+.btn-Acorn:hover {
   border-radius: 9px;
   background-color: var(--button-green-hover);
   color: var(--button-text-section);

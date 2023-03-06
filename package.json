@@ -1,7 +1,7 @@
 {
-  "name": "SnowBots",
+  "name": "Acorn",
   "version": "1.3.1",
-  "description": "SnowBots.cf",
+  "description": "Acorn.ink",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -11,6 +11,7 @@
     "body-parser": "^1.19.0",
     "canvas": "^2.8.0",
     "canvas-constructor": "^4.1.0",
+    "canvas-senpai": "^2.0.3",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.5",
     "child_process": "^1.0.2",
@@ -18,12 +19,15 @@
     "cron": "^1.8.2",
     "database": "0.0.2",
     "disbots-xyz": "^1.0.0",
+    "disbots.js": "^1.0.0",
+    "discord-button-page": "^6.2.0",
     "discord-buttons": "^4.0.0",
     "discord-canvas": "^1.4.1",
     "discord.js": "^12.5.1",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-minify-html": "^0.12.0",
+    "express-minify-html": "^0.10.0",
     "express-minify-html-terser": "^1.0.2",
     "express-rate-limit": "^5.2.6",
     "express-session": "^1.17.1",
@@ -36,14 +40,14 @@
     "jimp": "^0.16.1",
     "jquery": "^3.6.0",
     "level-session-store": "^2.2.0",
-    "marked": "^2.0.0",
+    "marked": "^4.2.12",
     "memorystore": "^1.6.4",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.11.17",
     "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "passport-discord": "^0.1.4",
     "path": "^0.12.7",
     "pretty-ms": "^7.0.1",
@@ -53,8 +57,10 @@
     "request": "^2.88.2",
     "snow-db": "^2.0.2",
     "socket.io": "^4.0.1",
+    "superagent": "^8.0.9",
     "sweetalert": "^2.1.2",
     "sweetalert2": "10.15.6",
+    "twemoji-parser": "^14.0.0",
     "vcodes.js": "^1.0.5",
     "void.nsfw": "^1.0.8-beta",
     "webhook-discord": "^3.7.7"
@@ -66,7 +72,7 @@
     "url": ""
   },
   "keywords": [
-    "SnowBots.cf"
+    "Acorn.ink"
   ],
-  "author": "SnowBots Team"
+  "author": "Acorn Team"
 }

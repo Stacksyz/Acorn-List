@@ -53,11 +53,11 @@ input[type="text"]:disabled {
               </div>
               <div class="form-group">
                 <label><i class="fab fa-google"></i> Website</label>
-                  <input type="text" name="website" id="website" class="form-control" placeholder="https://SnowBots.cf"/>
+                  <input type="text" name="website" id="website" class="form-control" placeholder="https://list.acorn.ink"/>
               </div>
               <div class="form-group">
                 <label><i class="fab fa-discord"></i> Support Server</label>
-                 <input type="text" name="support" id="support" class="form-control" placeholder="https://SnowBots.cf/dc"/>
+                 <input type="text" name="support" id="support" class="form-control" placeholder="https://list.acorn.ink/dc"/>
               </div>
               <div class="form-group">
                 <label><i class="fab fa-discord"></i> Invite Link</label>
@@ -65,7 +65,7 @@ input[type="text"]:disabled {
               </div>
               <div class="form-group">
                 <label><i class="fab fa-github"></i> Github Repository</label>
-                  <input type="text" name="github" id="github" class="form-control" placeholder="https://github.com/mipcit1010/SnowBots"/>
+                  <input type="text" name="github" id="github" class="form-control" placeholder="https://github.com/mipcit1010/Acorn"/>
               </div>
               <div class="form-group">
                 <label><i class="fad fa-image"></i> Background Image</label>
@@ -119,7 +119,7 @@ input[type="text"]:disabled {
  <div class="g-recaptcha" data-sitekey="6LcwY-EbAAAAAKz8nJRLxW-lxG4Yyrf-R8TB-d7K" data-theme="dark"></div>
         <div id="g-recaptcha-error"> </div>
         <br>
-      <button type="submit" name="btnSubmit" class="btn btn-SnowBots" onclick="test()"><i class="fal fa-paper-plane"></i> Submit</button>
+      <button type="submit" name="btnSubmit" class="btn btn-Acorn" onclick="test()"><i class="fal fa-paper-plane"></i> Submit</button>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
 				<script>
@@ -159,7 +159,7 @@ function verifyCaptcha() {
      title: 'Succesfull...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = `/bot/${urlParams.get('botID')}`;
@@ -171,7 +171,7 @@ function verifyCaptcha() {
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = '/addbot';

@@ -13,6 +13,8 @@ let botsdata = require("./src/database/models/botlist/bots.js");
 let profiledata = require("./src/database/models/profile.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
+const dotenv = require("dotenv")
+dotenv.config()
 
 
 /*=======================================================================================*/
@@ -36,7 +38,7 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
                         channel.send(`<@${botData.ownerID}>`, {content: `<@${botData.ownerID}>`, embed: new Discord.MessageEmbed()
                             .setAuthor(newPresence.member.user.tag, newPresence.member.user.displayAvatarURL())
                             .setTitle(`<:offline:862306785133592636> **Your Bot \`${newPresence.member.user.tag}\` went offline!**`)
-                            .setURL(`https://SnowBots.cf/bot/${newPresence.member.id}`)
+                            .setURL(`https://list.acorn.ink/bot/${newPresence.member.id}`)
                             .setColor("RED")
                             .setThumbnail(newPresence.member.user.displayAvatarURL())
                             .setDescription(`***It is <@${newPresence.member.id}> this Bot!***`)
@@ -58,7 +60,7 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
                         themsg.edit(`<@${botData.ownerID}>`, {content: `<@${botData.ownerID}>`, embed: new Discord.MessageEmbed()
                             .setAuthor(newPresence.member.user.tag, newPresence.member.user.displayAvatarURL())
                             .setTitle(`<:online:862306785007632385> **Your Bot \`${newPresence.member.user.tag}\` is back online!**`)
-                            .setURL(`https://SnowBots.cf/bot/${newPresence.member.id}`)
+                            .setURL(`https://list.acorn.ink/bot/${newPresence.member.id}`)
                             .setColor("GREEN")
                             .setThumbnail(newPresence.member.user.displayAvatarURL())
                             .setDescription(`***It is <@${newPresence.member.id}> this Bot!***\n:heart: *Thanks for bringing it back online!*`)
@@ -68,7 +70,7 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
                         channel.send(`<@${botData.ownerID}>`, {content: `<@${botData.ownerID}>`, embed: new Discord.MessageEmbed()
                             .setAuthor(newPresence.member.user.tag, newPresence.member.user.displayAvatarURL())
                             .setTitle(`<:online:862306785007632385> **Your Bot \`${newPresence.member.user.tag}\` is back online!**`)
-                            .setURL(`https://SnowBots.cf/bot/${newPresence.member.id}`)
+                            .setURL(`https://list.acorn.ink/bot/${newPresence.member.id}`)
                             .setColor("GREEN")
                             .setThumbnail(newPresence.member.user.displayAvatarURL())
                             .setDescription(`***It is <@${newPresence.member.id}> this Bot!***\n:heart: *Thanks for bringing it back online!*`)
@@ -101,10 +103,10 @@ a new member join */
 
     );
 
-  let channel = member.guild.channels.cache.find(c => c.name === '👋・⌬〢welcome')
+  let channel = member.guild.channels.cache.find(c => c.name === 'joinink')
   let WELCOME = new Discord.MessageEmbed()
-  .setTitle('New User Has Joined SnowBots.cf')
-  .setDescription(`${member.user} Welcome to **SnowBots.cf** Support Server!\n\nWe have \`${member.guild.memberCount}\` members!`)
+  .setTitle('New User Has Joined Acorn.ink')
+  .setDescription(`${member.user} Welcome to **Acorn.ink** Support Server!\n\nWe have \`${member.guild.memberCount}\` members!`)
   .setColor('BLUE')
   .setThumbnail(client.user.avatarURL)
   .setTimestamp()
@@ -123,10 +125,10 @@ a new member join */
       "welcome-image.png"
 
     );
-  let channel = member.guild.channels.cache.find(c => c.name === '👋・⌬〢welcome')
+  let channel = member.guild.channels.cache.find(c => c.name === 'joinink')
   let BYE = new Discord.MessageEmbed()
-  .setTitle('User Has Left SnowBots.cf')
-  .setDescription(`${member.user} Left **SnowBots.cf** Support Server!\n\nWe have \`${member.guild.memberCount}\` members!`)
+  .setTitle('User Has Left Acorn.ink')
+  .setDescription(`${member.user} Left **Acorn.ink** Support Server!\n\nWe have \`${member.guild.memberCount}\` members!`)
   .setColor('BLUE')
   .setThumbnail(client.user.avatarURL)
   .setTimestamp()
@@ -134,13 +136,13 @@ a new member join */
   channel.send(BYE)
 })
 
-/*/*--------------------=========SnowBots.cf=========--------------------*/
+/*/*--------------------=========Acorn.ink=========--------------------*/
 require('events').EventEmitter.prototype._maxListeners = 100;
 client.komutlar = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir("./src/commands", (err, files) => {
   if (err) console.error(err);
-  console.log(`[SnowBots.cf]: ${files.length} command loaded.`);
+  console.log(`[Acorn.ink]: ${files.length} command loaded.`);
   files.forEach(f => {
     if (!f.endsWith('.js')) return
     let props = require(`./src/commands/${f}`);
@@ -270,7 +272,7 @@ client.on("guildMemberAdd", async (member) => {
     SERVER LIST CLIENT 
 */
 const serverClient = new Client();
-serverClient.login(config.bot.servers.token);
+serverClient.login(process.env.STOKEN);
 global.clientSL = serverClient;
 require("./src/servers/client.js");
 
@@ -279,9 +281,9 @@ require("./src/servers/client.js");
 require("./src/server.js")(client);
 require("./src/database/connect.js")(client);
 
-client.login(config.bot.token);
+client.login(process.env.BTOKEN);
 client.on('ready', async () => {
-  console.log("[SnowBots.cf]: Bot successfully connected as " + client.user.tag + ".");
+  console.log("[Acorn.ink]: Bot successfully connected as " + client.user.tag + ".");
   let botsSchema = require("./src/database/models/botlist/bots.js");
   const bots = await botsSchema.find();
   client.user.setPresence({ activity: { type: 'WATCHING', name: '+help | ' + bots.length + ' bots' }, status: "online" });
@@ -304,7 +306,7 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
     // This will be the difference in milliseconds
     var dateDiff = now.getTime() - joined.getTime()
     if (dateDiff >= 60000) {
-      console.log("I have given some SnowBots Coins to that user")
+      console.log("I have given some Acorn Coins to that user")
       var randomNumber = Math.floor(Math.random() * 3) + 1;
       var find = await profiledata.findOne({ userID: newState.member.id })
       if (!find.userID) {
@@ -332,9 +334,9 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
             }
           }, function(err, docs) { })
       }
-      client.channels.cache.get('1053334264181174322').send(new Discord.MessageEmbed().setTitle(`SnowBots Coins`).setDescription(`Hey <@${newState.member.id}>, You have gained some **SnowBots Coins** for being active!\n<:members:876940862305751121> View your [profile](https://SnowBots.cf/user/${newState.member.id})`).setFooter(`CopyRight @ 2020 - 2022 SnowBots.cf All Rights Served`))
+      client.channels.cache.get('1082264641528397885').send(new Discord.MessageEmbed().setTitle(`Acorn Coins`).setDescription(`Hey <@${newState.member.id}>, You have gained some **Acorn Coins** for being active!\n<:members:876940862305751121> View your [profile](https://list.acorn.ink/user/${newState.member.id})`).setFooter(`CopyRight @ 2020 - 2022 Acorn.ink All Rights Served`))
 
-      client.channels.cache.get('1053334264181174322').send(`<@${newState.member.id}>`)
+      client.channels.cache.get('1082264641528397885').send(`<@${newState.member.id}>`)
     }
   }
 })

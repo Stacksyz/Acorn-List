@@ -3,20 +3,20 @@
             bot: {
                 token: process.env.BTOKEN, 
  // Bot List Bot Token
-                prefix: "sb!",
+                prefix: "al!",
                 owners: ["847213179142799452"],
                 mongourl: process.env.MONGO,
                 servers: {
                     token: process.env.STOKEN, // Server List Bot Token
-                    prefix: "sbs!"
+                    prefix: "asl!"
                 }
             },
         
             website: {
-                callback: process.env.CALLBACK, //Login Call Back, Example: https://SnowBots.cf/callback
+                callback: process.env.CALLBACK, //Login Call Back, Example: https://list.acorn.ink/callback
                 secret: process.env.SECRET, //Bot Secret Id.
                 clientID: process.env.CLIENTID, // Bot client id.
-                clientID2: "1053295843727392878",
+                clientID2: "1082257222572195901",
                 tags: [ "Moderation", "Fun", "Minecraft","Economy","Guard","NSFW","Anime","Invite","Music","Logging", "Web Dashboard", "Reddit", "Youtube", "Twitch", "Crypto", "Leveling", "Game", "Roleplay", "Utility", "Turkish" ],
                 languages: [
                     { flag: 'gb', code: 'en', name: 'English' },
@@ -134,35 +134,35 @@
             },
         
             server: {
-                id: "1053268172263915561",
-                invite: "https://discord.gg/FECm7Rytvw",
-                dslinvite: "https://discord.com/oauth2/authorize?client_id=1053026257559879721&permissions=8&scope=bot",
-                dblinvite: "https://discord.com/api/oauth2/authorize?client_id=1053295843727392878&permissions=8&redirect_uri=https%3A%2F%2FSnowBots.cf%2Fauth%2Fcallback&scope=bot",
+                id: "1082257568027652128",
+                invite: "https://discord.gg/ftqX755Q3e",
+                dslinvite: "https://discord.com/api/oauth2/authorize?client_id=1082257222572195901&permissions=8&scope=bot",
+                dblinvite: "https://discord.com/api/oauth2/authorize?client_id=1082256413251866706&permissions=8&scope=bot%20applications.commands",
     roles: {
-      yonetici: "1053331399442174042",
-      manager: "1053331407029669910", 
-      booster: "1053331435882287154",
-      sponsor: "1053331418719199303", 
-      community: "1053331440596688946",
-      supporter: "1053331429293043722", 
-      partnerRole: "1053331423370678302",
-      site_creator: "1053331399442174042",
-      administrator: "1053331410179600415",
-      moderator: "1053331417590943764",
-      premiumuser: "1053333131295469578",
-      donator: "1053332783256313896",
-      javauser: "1053332789921071184",
-      pythonuser: "1053332793750474794",
-      bh: "1053332800859799602",
-      gbh: "1053332809361670175",
+      yonetici: "1082259779017252884",
+      manager: "1082261512846061608", 
+      booster: "1082261525701603329",
+      sponsor: "1082261525177303050", 
+      community: "1082262584163573790",
+      supporter: "1082261527899426899", 
+      partnerRole: "1082261527022813234",
+      site_creator: "1082259779017252884",
+      administrator: "1082261521763151962",
+      moderator: "1082261523029819453",
+      premiumuser: "1082263021189070848",
+      donator: "1082261823123882085",
+      javauser: "1082262590975115284",
+      pythonuser: "1082262592560570488",
+      bh: "1082262594297016330",
+      gbh: "1082263018232086578",
       profile: {
-        sitecreator:"1053331399442174042",
-        booster: "1053331435882287154",
-        community: "1053331440596688946",
-        sponsor: "1053331418719199303", 
-        supporter: "1053331429293043722", 
-        manager: "1053331407029669910", 
-        partnerRole: "1053331423370678302"
+        sitecreator:"1082259779017252884",
+        booster: "1082261525701603329",
+        community: "1082262584163573790",
+        sponsor: "1082261525177303050", 
+        supporter: "1082261527899426899", 
+        manager: "1082261512846061608", 
+        partnerRole: "1082261527022813234"
       },
       codeshare: {
         javascript: "JS",
@@ -175,26 +175,26 @@
         twentyInvite: "20 INVITES"
       },
       botlist: {
-        ownerserver: "1053331399442174042",
-        developer: "1053332490019950692",
-        certified_developer: "1053331444010864661",
-        boosted_developer: "1053331446745538621",
-        promoted_developer: "1053331448339374091",
-        premium_developer: "1053331450176479232", // premium server owner role id
-        bot: "1053332435120685066",
-        boosted_bot: "1053332292812156929",
-        promoted_bot: "1053332298919059506",
-        certified_bot: "1053332271458947142"
+        ownerserver: "1082259779017252884",
+        developer: "1082261829943836753",
+        certified_developer: "1082261826445770812",
+        boosted_developer: "1082261827385294858",
+        promoted_developer: "1082261828526162032",
+        premium_developer: "1082261824738693140", // premium server owner role id
+        bot: "1082262582636851271",
+        boosted_bot: "1082262581294669865",
+        promoted_bot: "1082262579520471091",
+        certified_bot: "1082262577695969280"
       }
     },
                 channels: {
-                    codelog: "1053333499731509338",
-                    login: "1053333775095967744",
-                    webstatus: "1053333834936103012",
-                    uptimelog: "1053333529435590796",
-                    botlog: "1053333585958015067",
-                    votes: "1053333602026405898",
-                    reportlog: "1053333612751233054"
+                    codelog: "1082263683088003182",
+                    login: "1082263735101554728",
+                    webstatus: "1082259568152813568",
+                    uptimelog: "1082263799647719535",
+                    botlog: "1082258619065704509",
+                    votes: "1082263985983869008",
+                    reportlog: "1082263919739031633"
     }
   }
 

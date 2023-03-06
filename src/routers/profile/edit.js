@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const botsdata = require("../../database/models/botlist/bots.js");
 
-console.log("[SnowBots.cf]: Profile/Edit router loaded.");
+console.log("[Acorn.ink]: Profile/Edit router loaded.");
 
 const profiledata = require("../../database/models/profile.js");
 const client = global.Client;

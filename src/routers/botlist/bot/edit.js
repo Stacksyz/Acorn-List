@@ -4,7 +4,7 @@ const client = global.Client;
 const channels = global.config.server.channels;
 const Discord = require('discord.js')
 
-console.log("[SnowBots.cf]: Botlist/Edit router loaded.");
+console.log("[Acorn.ink]: Botlist/Edit router loaded.");
 
 app.get("/bot/:botID/edit", global.checkAuth, async (req, res) => {
     let botdata = await botsdata.findOne({

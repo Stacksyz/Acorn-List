@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const db = require("../../database/models/servers/server.js");
 
-console.log("[SnowBots.cf/server]: Tag router loaded.");
+console.log("[Acorn.ink/server]: Tag router loaded.");
 
 app.get("/tag/:tag", async (req, res) => {
     let page = req.query.page || 1;

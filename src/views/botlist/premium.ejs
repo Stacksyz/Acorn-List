@@ -8,11 +8,11 @@ color: gray;
 </style>
 <div class="container px-3 mt-2 pt-5">
     <div class="container px-3 content is-widescreen pt-5">
-        <div class="bg-vote-SnowBots pt-5">
-<div class="bg-vote-SnowBots pt-5">
+        <div class="bg-vote-Acorn pt-5">
+<div class="bg-vote-Acorn pt-5">
 <h3 class="has-text-white is-size-3" style="margin-bottom: 10px;"> </h3>
 <center>
-<h3 style="color:white; text-shadow: 2px 2px 5px black;" translate="no" color="" id="fat">SnowBots Premium Plans
+<h3 style="color:white; text-shadow: 2px 2px 5px black;" translate="no" color="" id="fat">Acorn Premium Plans
 </h3>
 <p class="text-muted"><strong>Premium Plan Monthly</strong> <span class="badge badge-danger bg-boost">5$ - (Monthly) OR Nitro Classic (1 - M )</span><br><span data-tooltip-location="top">&emsp;<i class="fad fa-heart-circle has-text-white" style="font-size:20px"></i></span> Support Us<br>&emsp;<i class="fas fa-paint-brush has-text-white" style="font-size:20px"></i> Premium Widgets<br>&emsp;<i class="fad fa-ad has-text-white" style="font-size:20px"></i> No Ads<br><strong>Premium Plan Yearly </strong><span class="badge badge-danger bg-prem">20$ - (Yearly) OR Nitro Classic (1 - Y )</span><br><span data-tooltip-location="top">&emsp;<i class="fad fa-heart-circle has-text-white" style="font-size:20px"></i></span> Support Us<br>&emsp;<i class="fas fa-paint-brush has-text-white" style="font-size:20px"></i> Premium Widgets<br>&emsp;<i class="fad fa-ad has-text-white" style="font-size:20px"></i> No Ads</p>
 <br>
@@ -24,7 +24,7 @@ color: gray;
     <button onclick="location.href='/dc'" class="btn btn-bot1"><i class="fad fa-check"></i>&nbsp;Contact The Owner to pay</button>
     </center>
         <center>
-    <button onclick="location.href='/premium/panel?success=true&message=Welcome to SnowBots Premium!'" class="btn btn-bot1"><i class="fad fa-stars"></i>&nbsp;Already Have Premium? Click Here!</button>
+    <button onclick="location.href='/premium/panel?success=true&message=Welcome to Acorn Premium!'" class="btn btn-bot1"><i class="fad fa-stars"></i>&nbsp;Already Have Premium? Click Here!</button>
     </center>
 </div>
 
@@ -37,7 +37,7 @@ color: gray;
      title: 'Successful...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy  SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy  Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/premium/panel`;
@@ -49,7 +49,7 @@ color: gray;
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/premium`;

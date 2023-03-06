@@ -3,7 +3,7 @@ const uptimeSchema = require("../../../database/models/uptime.js");
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[SnowBots.cf]: Admin/Uptime/Index router loaded.");
+console.log("[Acorn.ink]: Admin/Uptime/Index router loaded.");
 
 app.get("/admin/uptimes", global.checkAuth, async (req, res) => {
     let updata = await uptimeSchema.find();

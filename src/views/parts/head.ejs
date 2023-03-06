@@ -40,9 +40,9 @@ function disableclick(event)
     }
 </script>
 
-    <nav class="navbar navbar-expand-lg navbar-dark p-2 pl-4 pr-4 bg-SnowBots">
+    <nav class="navbar navbar-expand-lg navbar-dark p-2 pl-4 pr-4 bg-Acorn">
         <div class="container">
-        <a title="SnowBots" class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="../../img/logo.png" alt="SnowBots"/></a>
+        <a title="Acorn" class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="../../img/logo.png" alt="Acorn"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
           <span class="fad fa-bars fa-2x"></span>
         </button>
@@ -51,54 +51,54 @@ function disableclick(event)
           <ul class="navbar-nav mainlink mr-auto">
             <% if(!req.originalUrl.includes('/server')) { %>
             <li class="nav-item animate slideIn">
-              <a title="SnowBots" class="nav-link nvhome" href="/"><i class="fad fa-home mr-1"></i> Home</a>
+              <a title="Acorn" class="nav-link nvhome" href="/"><i class="fad fa-home mr-1"></i> Home</a>
             </li>
             <li class="nav-item animate slideIn">
-              <a title="SnowBots" class="nav-link" href="/bots"><i class="fad fa-robot mr-1"></i> Bots</a>
+              <a title="Acorn" class="nav-link" href="/bots"><i class="fad fa-robot mr-1"></i> Bots</a>
             </li>
             <li class="nav-item animate slideIn">
-              <a title="SnowBots" class="nav-link" href="/emojis"><i class="fad fa-smile mr-1"></i> Emojis</a>
+              <a title="Acorn" class="nav-link" href="/emojis"><i class="fad fa-smile mr-1"></i> Emojis</a>
             </li>
             <li class="nav-item animate slideIn"> 
-                <a title="SnowBots" class="nav-link" href="/templates"><i class="fad fa-list mr-1"></i> Templates</a>
+                <a title="Acorn" class="nav-link" href="/templates"><i class="fad fa-list mr-1"></i> Templates</a>
             </li>
 
             <% if(user) {%>
             <li class="nav-item animate slideIn">
-                <a title="SnowBots" class="nav-link" href="/addbot"><i class="fad fa-plus mr-1"></i> Add Bot</a>
+                <a title="Acorn" class="nav-link" href="/addbot"><i class="fad fa-plus mr-1"></i> Add Bot</a>
             </li>
             <% } %>
             <li class="nav-item animate slideIn">
-                <a title="SnowBots" class="nav-link" href="/servers"><i class="fad fa-server mr-1"></i>Servers</a>
+                <a title="Acorn" class="nav-link" href="/servers"><i class="fad fa-server mr-1"></i>Servers</a>
             </li>
             <li class="nav-item animate slideIn">
               <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News</a>
             </li>
             <% } else { %>
             <li class="nav-item animate slideIn">
-              <a title="SnowBots" class="nav-link nvhome" href="/servers"><i class="fad fa-home mr-1"></i> Home</a>
+              <a title="Acorn" class="nav-link nvhome" href="/servers"><i class="fad fa-home mr-1"></i> Home</a>
             </li>
             <li class="nav-item animate slideIn">
-                <a title="SnowBots" class="nav-link" href="/servers/tags"><i class="fad fa-tags mr-1"></i> Tags</a>
+                <a title="Acorn" class="nav-link" href="/servers/tags"><i class="fad fa-tags mr-1"></i> Tags</a>
             </li>
             <li class="nav-item animate slideIn">
-                <a title="SnowBots" class="nav-link" href="/"><i class="fad fa-robot mr-1"></i> Bots</a>
+                <a title="Acorn" class="nav-link" href="/"><i class="fad fa-robot mr-1"></i> Bots</a>
             </li>
             <li class="nav-item animate slideIn">
-                <a title="SnowBots" class="nav-link" href="/dsl"><i class="fad fa-robot mr-1"></i> Invite DSL</a>
+                <a title="Acorn" class="nav-link" href="/dsl"><i class="fad fa-robot mr-1"></i> Invite DSL</a>
             </li>
             <li class="nav-item animate slideIn">
-              <a title="SnowBots" class="nav-link" href="/emojis"><i class="fad fa-smile mr-1"></i> Emojis</a>
+              <a title="Acorn" class="nav-link" href="/emojis"><i class="fad fa-smile mr-1"></i> Emojis</a>
             </li>
             <li class="nav-item animate slideIn"> 
-                <a title="SnowBots" class="nav-link" href="/templates"><i class="fad fa-list mr-1"></i> Templates</a>
+                <a title="Acorn" class="nav-link" href="/templates"><i class="fad fa-list mr-1"></i> Templates</a>
             </li>
             <li class="nav-item animate slideIn">
               <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News</a>
             </li>
             <% if(user) {%>
             <li class="nav-item animate slideIn"> 
-                <a title="SnowBots" class="nav-link" href="/server/add"><i class="fad fa-plus mr-1"></i> Add Server</a>
+                <a title="Acorn" class="nav-link" href="/server/add"><i class="fad fa-plus mr-1"></i> Add Server</a>
             </li>
             <% } %>
             <% } %>
@@ -123,7 +123,7 @@ function disableclick(event)
                 if(guild) {
                 if(guild.roles.cache.get(roles.administrator) || guild.roles.cache.get(roles.moderator)) {
                 %>
-                    <div class="dropdown-divider"></div><a title="SnowBots" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
+                    <div class="dropdown-divider"></div><a title="Acorn" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
 
                 <% }} %>
             <% } %>
@@ -136,12 +136,12 @@ function disableclick(event)
             %>            
             &nbsp;
             <li class="nav-item dropdown">
-                  <a class="btn btn-SnowBots dropdown-toggle slideIn" href="#" id="navbarDropdown" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="btn btn-Acorn dropdown-toggle slideIn" href="#" id="navbarDropdown" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fad fa-globe"></i>&nbsp;Language
                   </a>
                 <div class="dropdown-menu dropdown-menu-right slideIn" style="max-width:220px!important;">
             <% languages.map(x => { %>
-                <a href="#" translate="no" onclick="doGTranslate('en|<%= x.code %>')" title="SnowBots" class="dropdown-item slideIn">
+                <a href="#" translate="no" onclick="doGTranslate('en|<%= x.code %>')" title="Acorn" class="dropdown-item slideIn">
                 <img src="https://www.countryflags.io/<%= x.flag %>/flat/32.png">
                     &nbsp;<%= x.name %>
                 </a>
@@ -153,7 +153,7 @@ function disableclick(event)
                                       &nbsp;
                           <% if(user) {%>
               <li class="nav-item dropdown">
-                  <a class="btn btn-SnowBots dropdown-toggle slideIn" href="#" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="btn btn-Acorn dropdown-toggle slideIn" href="#" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img width="24" style="border-radius: 50%" src='https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.png'>
                     <%=user.username%><small>#<%=user.discriminator%></small>
                   </a>
@@ -161,7 +161,7 @@ function disableclick(event)
               </li>
             <% } else { %>
             <li class="nav-item">
-                <a title="SnowBots" class="btn btn-SnowBots" href="/uneed2login"><i class="fad fa-sign-in mr-1"></i> Login</a>
+                <a title="Acorn" class="btn btn-Acorn" href="/uneed2login"><i class="fad fa-sign-in mr-1"></i> Login</a>
             </li>
 	    <% } %>
           </ul>

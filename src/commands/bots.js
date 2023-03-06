@@ -1,4 +1,4 @@
-const SnowBots = require("disbots-xyz");
+const Acorn = require("disbots-xyz");
 const Discord = require('discord.js')
 const botdata = require("../database/models/botlist/bots.js")
 module.exports.run = async (client,message,args) => {
@@ -16,9 +16,9 @@ module.exports.run = async (client,message,args) => {
    await editthis.delete()
    const embed = new Discord.MessageEmbed()
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-   .setDescription(`<:search:876255860614115358> *Searched Your account*\n\n*You Own* \`\`${bots.length || 0}\`\` *Discord Bot(s) in SnowBots*`)
+   .setDescription(`<:search:876255860614115358> *Searched Your account*\n\n*You Own* \`\`${bots.length || 0}\`\` *Discord Bot(s) in Acorn*`)
    .setColor("#7289da")
-   .setFooter(`Powered by SnowBots.cf`)
+   .setFooter(`Powered by Acorn.ink`)
    .addField("Bots", `${!bots ? "" : bots.map(a => "<@"+a.botID+">").join("\n")}`, true)
    await message.channel.send(embed)
    } catch(e) {

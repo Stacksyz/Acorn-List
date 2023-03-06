@@ -6,7 +6,7 @@ const roles = global.config.server.roles,
 const client = global.Client;
 const Discord = require("discord.js");
 
-console.log("[SnowBots.cf]: Uptime/Add router loaded.");
+console.log("[Acorn.ink]: Uptime/Add router loaded.");
 
 app.post("/add", global.checkAuth, async (req, res) => {
     const rBody = req.body;

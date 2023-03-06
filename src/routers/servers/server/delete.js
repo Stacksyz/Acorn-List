@@ -3,7 +3,7 @@ const db = require("../../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[SnowBots.cf/servers]: Join router loaded.");
+console.log("[Acorn.ink/servers]: Join router loaded.");
 
 app.get("/:guildID/delete", global.checkAuth, async (req,res) => {
     let serverData = await db.findOne({

@@ -4,7 +4,7 @@ const botsdb = require("../../../database/models/botlist/bots.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 const clientTwo = global.Client;
-console.log("[SnowBots.cf/servers]: View router loaded.");
+console.log("[Acorn.ink/servers]: View router loaded.");
 
 app.get("/:guildID", async (req,res) => {
     let sdb = await db.findOne({ id: req.params.guildID });

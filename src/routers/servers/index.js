@@ -3,7 +3,7 @@ const db = require("../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[SnowBots.cf/servers]: Index router loaded.");
+console.log("[Acorn.ink/servers]: Index router loaded.");
 
 app.get("/", async (req,res) => {
     res.render("servers/index.ejs", {

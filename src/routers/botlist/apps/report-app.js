@@ -4,7 +4,7 @@ const apps = require("../../../database/models/botlist/report-apps.js");
 const client = global.Client;
 const Discord = require("discord.js");
 
-console.log("[SnowBots.cf]: Botlist/Report router loaded.");
+console.log("[Acorn.ink]: Botlist/Report router loaded.");
 
 app.get("/:botID/report", global.checkAuth, async (req, res) => {
     const userbots = await botsdata.find({

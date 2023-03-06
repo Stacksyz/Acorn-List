@@ -37,7 +37,7 @@ module.exports = async (client) => {
 
   const apiLimiter = rateLimit({
     store: new MongoStore({
-      uri: global.config.bot.mongourl,
+      uri: process.env.MONGO,
       collectionName: "rate-limit",
       expireTimeMs: 60 * 60 * 1000,
       resetExpireDateOnChange: true
@@ -72,9 +72,9 @@ module.exports = async (client) => {
   passport.deserializeUser((obj, done) => done(null, obj));
 
   passport.use(new Strategy({
-    clientID: config.website.clientID,
-    clientSecret: config.website.secret,
-    callbackURL: config.website.callback,
+    clientID: process.env.CLIENTID,
+    clientSecret: process.env.SECRET,
+    callbackURL: process.env.CALLBACK,
     scope: ["identify", "guilds", "guilds.join"]
   },
     (accessToken, refreshToken, profile, done) => {
@@ -171,13 +171,13 @@ module.exports = async (client) => {
   }
   app.get("/robots.txt", function(req, res) {
     res.set('Content-Type', 'text/plain');
-    res.send(`Sitemap: https://SnowBots.cf/sitemap.xml`);
+    res.send(`Sitemap: https://list.acorn.ink/sitemap.xml`);
   });
   app.get("/sitemap.xml", async function(req, res) {
-    let link = "<url><loc>https://SnowBots.cf/</loc></url>";
+    let link = "<url><loc>https://list.acorn.ink/</loc></url>";
     let botdataforxml = await botsdata.find()
     botdataforxml.forEach(bot => {
-      link += "\n<url><loc>https://SnowBots.cf/bot/" + bot.botID + "</loc></url>";
+      link += "\n<url><loc>https://list.acorn.ink/bot/" + bot.botID + "</loc></url>";
     })
     res.set('Content-Type', 'text/xml');
     res.send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">${link}</urlset>`);
@@ -209,12 +209,12 @@ module.exports = async (client) => {
         dynamic: true
       })).setThumbnail(a.avatarURL({
         dynamic: true
-      })).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://SnowBots.cf/user/${a.id}) The user tried to log into the site but could not log in because s/he was blocked from the site.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+      })).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://list.acorn.ink/user/${a.id}) The user tried to log into the site but could not log in because s/he was blocked from the site.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
     })
     req.session.destroy(() => {
       res.json({
         login: false,
-        message: "You have been blocked from SnowBots.",
+        message: "You have been blocked from Acorn.",
         logout: true
       })
       req.logout();
@@ -239,7 +239,7 @@ module.exports = async (client) => {
         dynamic: true
       })).setThumbnail(a.avatarURL({
         dynamic: true
-      })).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://SnowBots.cf/user/${a.id}) User named **site** logged in.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+      })).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://list.acorn.ink/user/${a.id}) User named **site** logged in.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
 
     })
   }
@@ -615,7 +615,7 @@ app.get("/api/embed/:id", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#DCE2F9")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf`, 175, 245);
+        .printText(`Acorn.ink`, 175, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -662,7 +662,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#7a5bc7")
         .setTextFont('bold 20px sans')
-        .printText(` SnowBots.cf | Premium`, 115, 245);
+        .printText(` Acorn.ink | Premium`, 115, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -709,7 +709,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#3792c9")
         .setTextFont('bold 20px sans')
-        .printText(` SnowBots.cf | Premium`, 115, 245);
+        .printText(` Acorn.ink | Premium`, 115, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -756,7 +756,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#bd181d")
         .setTextFont('bold 20px sans')
-        .printText(` SnowBots.cf | Premium`, 115, 245);
+        .printText(` Acorn.ink | Premium`, 115, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -803,7 +803,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#DCE2F9")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf`, 175, 245);
+        .printText(`Acorn.ink`, 175, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -850,7 +850,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#DCE2F9")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf Made By SnowBots.cf`, 93, 239);
+        .printText(`Acorn.ink Made By Acorn.ink`, 93, 239);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -897,7 +897,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#DCE2F9")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf Made By SnowBots.cf`, 93, 246);
+        .printText(`Acorn.ink Made By Acorn.ink`, 93, 246);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -944,7 +944,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#000000")
         .setTextFont('bold 20px sans')
-        .printText(`      SnowBots.cf | Premium`, 93, 246);
+        .printText(`      Acorn.ink | Premium`, 93, 246);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -991,7 +991,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#000000")
         .setTextFont('bold 20px sans')
-        .printText(`      SnowBots.cf | Premium`, 93, 246);
+        .printText(`      Acorn.ink | Premium`, 93, 246);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -1038,7 +1038,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#000000")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf Made By SnowBots.cf`, 93, 246);
+        .printText(`Acorn.ink Made By Acorn.ink`, 93, 246);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -1085,7 +1085,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#000000")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf`, 175, 245);
+        .printText(`Acorn.ink`, 175, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -1132,7 +1132,7 @@ app.get("/api/premium/embed/:id/purple", async (req, res) => {
         .printRectangle(0, 220, 500, 450)
         .setColor("#000000")
         .setTextFont('bold 20px sans')
-        .printText(`SnowBots.cf`, 175, 245);
+        .printText(`Acorn.ink`, 175, 245);
       res.writeHead(200, {
         "Content-Type": "image/png"
       });
@@ -1252,8 +1252,8 @@ app.get("/admin/ad-bot/give/:botID", checkMaintence, checkAdmin, checkAuth, asyn
   });
 
   client.users.fetch(botdata.botID).then(bota => {
-    client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Advertized!`).setDescription(`<:check:870019748585414686> <@${botdata.ownerID}>'s bot  **${bota.tag}** has been **Advertized** on SnowBots!`))
-    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Advertized!`).setDescription(`<:check:870019748585414686> Your bot named **${bota.tag}** has been **Advertized** on SnowBots!`))
+    client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Advertized!`).setDescription(`<:check:870019748585414686> <@${botdata.ownerID}>'s bot  **${bota.tag}** has been **Advertized** on Acorn!`))
+    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Advertized!`).setDescription(`<:check:870019748585414686> Your bot named **${bota.tag}** has been **Advertized** on Acorn!`))
   });
   let guild = client.guilds.cache.get(config.server.id)
   if (botdata.coowners) {
@@ -1398,12 +1398,12 @@ app.post("/admin/news", checkMaintence, checkAdmin, checkAuth, async (req, res) 
 
   const Hook = new webhook.Webhook("https://ptb.discord.com/api/webhooks/880070429685993492/LW_1zLz_OWWFVjCfRFCGM3fw7GPmbceOT1RpxYPhSaCCU4u6GYl7HVXZYSSbLC0JDxHp");
   const msg = new webhook.MessageBuilder()
-    .setName('SnowBots | News')
+    .setName('Acorn | News')
     .setAvatar(req.body.icon)
     .setTitle(req.body.serverName)
-    .setDescription(`<@${req.user.id}> Posted a News \n\nLink:\n[website](https://SnowBots.cf/news)`)
+    .setDescription(`<@${req.user.id}> Posted a News \n\nLink:\n[website](https://list.acorn.ink/news)`)
     .setColor('#0099ff')
-    .setFooter(`Copyright © SnowBots.cf official 2021`)
+    .setFooter(`Copyright © Acorn.ink official 2021`)
   Hook.send(msg);
 
 
@@ -1478,7 +1478,7 @@ const io = require('socket.io')(http);
 io.on('connection', socket => {
   io.emit("userCount", io.engine.clientsCount);
 });
-http.listen(3000, () => { console.log("[SnowBots.cf]: Website running on 3000 port.") });
+http.listen(3000, () => { console.log("[Acorn.ink]: Website running on 3000 port.") });
 
 //------------------- Routers -------------------//
 
@@ -1491,8 +1491,8 @@ console.clear();
 */
 console.log(`
       [===========================================]
-                       SnowBots.cf
-        https://github.com/mipcit1010/SnowBots
+                       Acorn.ink
+        https://github.com/mipcit1010/Acorn
                 Developed by Claudette
                     Achievements =)
       [===========================================]
@@ -1500,7 +1500,7 @@ console.log(`
 console.log("\x1b[32m", "System loading, please wait...")
 sleep(1050)
 console.clear();
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: General routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: General routers loading...");
 sleep(500);
 app.use("/", require('./routers/index.js'))
 app.use("/", require('./routers/partners.js'))
@@ -1510,7 +1510,7 @@ app.use("/", require('./routers/mini.js'))
 
 /* Uptime System */
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Uptime system routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Uptime system routers loading...");
 sleep(500);
 app.use("/uptime", require('./routers/uptime/add.js'))
 app.use("/uptime", require('./routers/uptime/delete.js'))
@@ -1518,14 +1518,14 @@ app.use("/uptime", require('./routers/uptime/links.js'))
 
 /* Profile System */
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Profile system routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Profile system routers loading...");
 sleep(500);
 app.use("/user", require('./routers/profile/index.js'))
 app.use("/user", require('./routers/profile/edit.js'))
 
 /* Code Share System */
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Code Share system routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Code Share system routers loading...");
 sleep(500);
 app.use("/codes", require('./routers/codeshare/view.js'))
 app.use("/codes", require('./routers/codeshare/list.js'))
@@ -1533,7 +1533,7 @@ app.use("/codes", require('./routers/codeshare/categories.js'))
 
 /* Botlist System */
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Botlist system routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Botlist system routers loading...");
 sleep(500);
 app.use("/", require('./routers/botlist/addbot.js'))
 app.use("/", require('./routers/botlist/mini.js'))
@@ -1547,7 +1547,7 @@ app.use("/", require('./routers/botlist/apps/report-app.js'))
 
 /* Server List System */
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Serverlist system routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Serverlist system routers loading...");
 sleep(500);
 app.use("/servers", require('./routers/servers/index.js'))
 app.use("/server", require('./routers/servers/add.js'))
@@ -1595,7 +1595,7 @@ app.use(async (req, res, next) => {
        }
     })
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Admin Panel system routers loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Admin Panel system routers loading...");
 sleep(500);
 app.use("/", require('./routers/admin/index.js'))
 app.use("/", require('./routers/admin/maintence.js'))
@@ -1617,7 +1617,7 @@ app.use("/", require('./routers/admin/uptime/index.js'))
 
 /* Bot System */
 console.log(" ")
-console.log('\x1b[36m%s\x1b[0m', "[SnowBots.cf]: Bot system loading...");
+console.log('\x1b[36m%s\x1b[0m', "[Acorn.ink]: Bot system loading...");
 app.use("/", require('./routers/api/api.js'))
 sleep(500)
 

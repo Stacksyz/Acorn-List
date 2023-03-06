@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const codesSchema = require("../../database/models/codes.js");
 
-console.log("[SnowBots.cf]: Code Share/Categories router loaded.");
+console.log("[Acorn.ink]: Code Share/Categories router loaded.");
 
 app.get("/categories", global.checkAuth, async (req, res) => {
 

@@ -4,7 +4,7 @@ const client = global.clientSL;
 const channels = global.config.server.channels;
 const Discord = require('discord.js')
 
-console.log("[SnowBots.cf/servers]: Edit router loaded.");
+console.log("[Acorn.ink/servers]: Edit router loaded.");
 
 app.get("/bot/:botID/announcement", global.checkAuth, async (req, res) => {
     const botdata = await botsdata.findOne({
@@ -53,7 +53,7 @@ app.post("/bot/:botID/announcement", global.checkAuth, async (req, res) => {
     client.users.fetch(req.params.botID).then(a => {
     client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed()
     .setTitle(`<:plus:870019597791805521> **${req.user.username}** posted a new announcement for **${a.tag}**`)
-    .setDescription(`[Click Here](https://SnowBots.cf/bot/${a.id})`)
+    .setDescription(`[Click Here](https://list.acorn.ink/bot/${a.id})`)
     .setColor("GREEN")
     .setTimestamp()
     .setFooter(`By - ${req.user.username}`))

@@ -3,12 +3,12 @@ const botsdata = require("../../database/models/botlist/bots.js");
 const channels = global.config.server.channels,
       roles = global.config.server.roles;
 
-console.log("[SnowBots.cf]: Api router loaded.");
+console.log("[Acorn.ink]: Api router loaded.");
 
 app.get("/api", async (req, res) => {
     res.json({
         "Hello": "World",
-        "Template By": "SnowBots.cf"
+        "Template By": "Acorn.ink"
         });
 });
 app.get("/api/bots/:botID", async (req, res) => {

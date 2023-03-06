@@ -8,33 +8,33 @@ module.exports.run = async (client,message,args) => {
    const embed = new Discord.MessageEmbed()
    
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-   .setDescription(`<a:yes:833101995723194437> **[SnowBots Help Menu](https://SnowBots.cf)** <a:yes:833101995723194437>`)
+   .setDescription(`<a:yes:833101995723194437> **[Acorn Help Menu](https://list.acorn.ink)** <a:yes:833101995723194437>`)
    .setColor("#7289da")
-   .setFooter('Powered By SnowBots.cf')
+   .setFooter('Powered By Acorn.ink')
    .addField("Extra Commands", "**\n`+`faq\n`+`emojis\n`+`support\n`+`news\n`+`addbot\n`+`addserver\n`+`topvoted\n`+`ping**" )
-   .setImage('https://cdn.discordapp.com/attachments/860627883731320866/872485215262605332/SnowBots.cf.png')
+   .setImage('https://cdn.discordapp.com/attachments/860627883731320866/872485215262605332/Acorn.ink.png')
 
    let button = new MessageButton()
   .setStyle('url')
-  .setURL('https://discord.com/api/oauth2/authorize?client_id=863104463229550612&permissions=8&redirect_uri=https%3A%2F%2FSnowBots.cf%2Fcallback&scope=bot') 
+  .setURL('https://discord.com/api/oauth2/authorize?client_id=863104463229550612&permissions=8&redirect_uri=https%3A%2F%2FAcorn.ink%2Fcallback&scope=bot') 
   .setLabel('Invite')
   .setEmoji('870019597791805521');
 
   let button2 = new MessageButton()
   .setStyle('url')
-  .setURL('https://SnowBots.cf/dc') 
+  .setURL('https://list.acorn.ink/dc') 
   .setLabel('Support')
   .setEmoji('872580192063860787');
   
   let button3 = new MessageButton()
   .setStyle('url')
-  .setURL('https://SnowBots.cf') 
+  .setURL('https://list.acorn.ink') 
   .setLabel('Website')
   .setEmoji('872580084077326337');
   
   let button4 = new MessageButton()
   .setStyle('url')
-  .setURL('https://SnowBots.cf/bot/863104463229550612') 
+  .setURL('https://list.acorn.ink/bot/863104463229550612') 
   .setLabel('Vote')
   .setEmoji('872580144714358784');
 

@@ -135,7 +135,7 @@ input[type="text"]:disabled {
         <div id="g-recaptcha-error"> </div>
         <br>
     <p class="text-muted">Spaces with <span style="color: rgb(175, 22, 22)">*</span> next to it are required.</p>
-      <button type="submit" name="btnSubmit" class="btn btn-SnowBots"><i class="fad fa-save"></i> Save</button>
+      <button type="submit" name="btnSubmit" class="btn btn-Acorn"><i class="fad fa-save"></i> Save</button>
   </form>
   <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
 				<script>
@@ -173,7 +173,7 @@ function verifyCaptcha() {
      title: 'Successful...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = `/bot/${urlParams.get('botID')}`;
@@ -185,7 +185,7 @@ function verifyCaptcha() {
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2021 &copy SnowBots.cf - All right reserved.'
+     footer: 'Copyright 2021 &copy Acorn.ink - All right reserved.'
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = `/bot/${urlParams.get('botID')}/edit`;

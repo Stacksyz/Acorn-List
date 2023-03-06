@@ -3,7 +3,7 @@ const Database = require("snow-db");
 const path = require("path")
 const db = new Database(path.join(__dirname, '../database/json/template.json'));
 
-console.log("[SnowBots.cf]: Templates router loaded.");
+console.log("[Acorn.ink]: Templates router loaded.");
 
 app.get("/templates", async (req,res) => {
     res.render("template.ejs", {

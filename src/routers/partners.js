@@ -3,7 +3,7 @@ const Database = require("snow-db");
 const path = require("path")
 const db = new Database(path.join(__dirname, '../database/json/partners.json'));
 
-console.log("[SnowBots.cf]: Partners router loaded.");
+console.log("[Acorn.ink]: Partners router loaded.");
 
 app.get("/partners", async (req,res) => {
     res.render("partners.ejs", {

@@ -4,7 +4,7 @@ const client = global.Client;
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[SnowBots.cf]: Admin/CodeShare/Edit router loaded.");
+console.log("[Acorn.ink]: Admin/CodeShare/Edit router loaded.");
 
 app.post("/admin/editcode/:code", global.checkAuth, async (req, res) => {
     const rBody = req.body;
@@ -22,8 +22,8 @@ app.post("/admin/editcode/:code", global.checkAuth, async (req, res) => {
     }, function(err, docs) {})
     client.channels.cache.get(global.config.server.channels.codelog).send(new Discord.MessageEmbed()
         .setTitle("Code edited!").setColor("GREEN").setFooter(config.footer)
-        .setDescription(`The user named **[${req.user.username}](https://SnowBots.cf/user/${req.user.id})** edited the code named **${rBody['codename']}**.`)
-        .addField("Code Link", `https://SnowBots.cf/code/${kod}`, true)
+        .setDescription(`The user named **[${req.user.username}](https://list.acorn.ink/user/${req.user.id})** edited the code named **${rBody['codename']}**.`)
+        .addField("Code Link", `https://list.acorn.ink/code/${kod}`, true)
         .addField("Code Description", rBody['codedesc'], true)
         .addField("Code Category", rBody['category'], true)
     )
